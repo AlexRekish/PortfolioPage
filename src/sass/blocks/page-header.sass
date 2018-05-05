@@ -1,0 +1,289 @@
+@import "../_vars"
+
+.page-header
+    background-image: url("../../img/header-bg.svg")
+    background-repeat: no-repeat
+    background-position: 100% 50%
+    background-size: 600px 1280px
+    height: 100vh
+    margin: 0
+    padding: 0
+    border: none
+
+.page-header__wrapper
+    width: 100%
+    display: flex
+    justify-content: space-between
+    transition: 0.5s
+    // transform: translateX(-320px)            
+
+.page-header__content
+    display: flex
+    flex-grow: 1
+    position: relative
+    margin: 150px 0 0 410px
+    max-width: 1320px
+    max-height: 745px    
+
+.page-header__photo
+    width: 100%
+    height: auto
+    object-fit: cover
+    // background-image: url("../../img/photo-triangle.svg"), url("../../img/photo-triangle-bottom.svg")
+    // background-repeat: no-repeat
+    // background-size: 200px 200px
+    // background-position: 0 0, 100% 100%
+    // clip-path: polygon(0px 0px, 0px 200px, 200px 0px)
+   
+.page-header__start
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0
+    text-decoration: none
+    color: #fff
+    padding: 30px 130px 25px 130px
+    line-height: 16px
+    text-align: center
+    vertical-align: middle
+    font-family: $header
+    font-weight: 700
+    background-color: $viol
+    text-transform: uppercase
+    border-bottom: 5px solid rgba($dark, 0.4)
+    border-radius: 5px
+
+    &:hover
+        background-color: #200132
+
+.page-header__name
+    position: absolute
+    z-index: 2
+    top: 50%
+    left: 0
+    transform: translate(-50%, -50%) 
+    background-color: rgba($viol, 0.2)
+    padding: 30px
+    transition: 0.5s
+    h1
+        display: block
+        font-size: 101px
+        line-height: 100px  
+        margin: 0
+        padding-bottom: 40px
+        font-weight: 500
+
+    .page-header__subtitle
+        font-family: $header
+        font-weight: 500
+        font-size: 24px
+        line-height: 30px 
+        text-transform: uppercase
+
+.page-header__social
+    width: 120px
+    padding: 0 20px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    position: relative
+
+.page-header__burger
+    position: absolute
+    text-align: left
+    top: 65px
+    right: 50%
+    transform: translateX(50%)
+    border: 0
+    background-color: transparent
+    cursor: pointer
+    width: 50px
+    height: 40px
+
+.page-header__burger-line
+    display: block
+    position: absolute
+    left: 0
+    width: 50px
+    height: 5px
+    background-color: #fff 
+    border-radius: 5px   
+    transition: all 0.5s
+
+.page-header__burger-line:first-child
+    top: 0
+
+.page-header__burger-line:nth-child(2)
+    top: 10px    
+
+.page-header__burger-line:nth-child(3)
+    top: 20px     
+
+.page-header__burger-line:nth-child(2):before
+    position: absolute
+    content: ""
+    opacity: 0
+
+.menu-open 
+    .page-header__burger-line:first-child
+        top: 10px
+        left: 15px
+        transform: rotate(-405deg) 
+
+    .page-header__burger-line:nth-child(2)
+        top: 10px
+        left: 3px
+        width: 22px
+
+    .page-header__burger-line:nth-child(2):before
+        content: ""
+        opacity: 1
+        transform: rotate(405deg)
+        background: none
+        border-top: 5px solid #fff 
+        border-right: 5px solid #fff 
+        height: 15px
+        width: 15px
+        top: -5px
+        right: 0    
+
+    .page-header__burger-line:nth-child(3)
+        top: 10px
+        left: 15px
+        transform: rotate(405deg)                        
+    // &::before  
+    //     content: ""
+    //     position: absolute
+    //     top: -12px
+    //     left: 0
+    //     width: 50px
+    //     height: 5px
+    //     background-color: #fff
+    //     border-radius: 5px     
+
+    // &::after  
+    //     content: ""
+    //     position: absolute
+    //     top: 12px
+    //     left: 0
+    //     width: 50px
+    //     height: 5px
+    //     background-color: #fff  
+    //     border-radius: 5px       
+
+
+.page-header__social-list
+    display: flex
+    flex-direction: column
+    list-style: none
+    justify-content: space-around
+    width: 100%
+    margin: 0
+    padding: 0
+    text-align: center
+
+.page-header__social-item
+    display: block
+    width: 100%
+    padding: 5px 0    
+
+.page-header__social-link
+    display: inline-block
+    background-color: rgba($dark, 0.7)
+    line-height: 0
+    margin: 0
+    padding: 15px 15px
+    border-radius: 50%
+
+    &:hover
+        background-color: $dark
+        box-shadow: inset 0 0 0 2px rgba(#fff, 0.4)
+
+    .page-header__social-icon
+    fill: #fff    
+    
+.page-header__menu
+    position: absolute
+    top: 0
+    right: 0
+    width: 320px
+    padding: 20px 50px
+    background-color: #4a4a4a
+    background-image: url("../../img/menu-triangle.svg")
+    background-repeat: no-repeat
+    background-position: 0 0
+    background-size: 320px 200px
+    height: 100%
+    display: flex
+    z-index: 1
+    transform: translateX(100%)
+    transition: 0.5s
+    margin-top: 1px
+    
+
+.main-menu__list
+    list-style: none
+    display: flex
+    flex-direction: column 
+    justify-content: center
+    align-items: center
+    text-align: center
+    padding: 0
+    margin: 0
+    width: 100% 
+
+.main-menu__list-item
+    display: block
+    width: 100%
+    
+
+.main-menu__link
+    display: block
+    padding: 15px 0
+    color: #fff 
+    text-decoration: none 
+    font-size: 24px
+    position: relative
+    z-index: 1
+    
+    &::before
+        content: ""
+        position: absolute
+        top: 100%
+        left: 0
+        width: 0
+        height: 4px
+        background: rgba($viol, 0.75)
+        transition: 0.7s
+        mix-blend-mode: multiply 
+
+    &::after
+        content: ""
+        position: absolute
+        top: 100%
+        right: 0
+        width: 0
+        height: 4px
+        background: rgba(#fff, 0.75)
+        transition: 0.7s
+        mix-blend-mode: multiply         
+    
+    &:hover::before
+        transform: translateX(100%)
+        width: 50%
+
+    &:hover::after
+        transform: translateX(-100%)
+        width: 50%    
+
+.wrapper-left
+    transition: 0.5s
+    transform: translateX(-320px)
+
+.menu-left
+    transition: 0.5s
+    transform: translateX(0);
+
+.name-right
+    transition: 0.5s
+    transform: translate(-15%, -50%)                
