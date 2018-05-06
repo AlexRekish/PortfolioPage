@@ -1,60 +1,46 @@
 @import "../_vars"
 
 .page-header
-    background-image: url("../../img/header-bg.svg")
+    background-image: url("../../img/header-bg2.svg")
     background-repeat: no-repeat
-    background-position: 100% 50%
-    background-size: 600px 1280px
-    height: 100vh
+    background-position: right bottom
+    background-size: 30% 100%
+    // height: 100vh
     margin: 0
     padding: 0
     border: none
 
 .page-header__wrapper
+    max-width: 100%
     width: 100%
     display: flex
     justify-content: space-between
-    transition: 0.5s
-    // transform: translateX(-320px)            
+    transition: 0.5s         
 
 .page-header__content
     display: flex
-    flex-grow: 1
     position: relative
-    margin: 150px 0 0 410px
+    margin: 150px 0 0 20%
+    width: 65%
+    height: 65%
     max-width: 1320px
-    max-height: 745px    
+    max-height: 745px  
+
+    & picture
+        width: 100%
+        margin: 0
+        padding: 0  
 
 .page-header__photo
     width: 100%
     height: auto
     object-fit: cover
-    // background-image: url("../../img/photo-triangle.svg"), url("../../img/photo-triangle-bottom.svg")
-    // background-repeat: no-repeat
-    // background-size: 200px 200px
-    // background-position: 0 0, 100% 100%
-    // clip-path: polygon(0px 0px, 0px 200px, 200px 0px)
-   
+    clip-path: polygon(0 20%, 0 100%, 75% 100%, 100% 80%, 100% 0, 25% 0)
+
 .page-header__start
-    display: block
     position: absolute
     bottom: 0
     left: 0
-    text-decoration: none
-    color: #fff
-    padding: 30px 130px 25px 130px
-    line-height: 16px
-    text-align: center
-    vertical-align: middle
-    font-family: $header
-    font-weight: 700
-    background-color: $viol
-    text-transform: uppercase
-    border-bottom: 5px solid rgba($dark, 0.4)
-    border-radius: 5px
-
-    &:hover
-        background-color: #200132
 
 .page-header__name
     position: absolute
@@ -65,118 +51,40 @@
     background-color: rgba($viol, 0.2)
     padding: 30px
     transition: 0.5s
-    h1
-        display: block
-        font-size: 101px
-        line-height: 100px  
-        margin: 0
-        padding-bottom: 40px
-        font-weight: 500
 
-    .page-header__subtitle
-        font-family: $header
-        font-weight: 500
-        font-size: 24px
-        line-height: 30px 
-        text-transform: uppercase
+.page-header__main-title    
+    display: block
+    font-size: 101px
+    line-height: 100px  
+    margin: 0
+    padding-bottom: 40px
+    font-weight: 500
+
+.page-header__subtitle
+    font-family: $header
+    font-weight: 500
+    font-size: 24px
+    line-height: 30px 
+    text-transform: uppercase
 
 .page-header__social
     width: 120px
-    padding: 0 20px
+    padding: 70px 20px 0 20px
     display: flex
+    flex-shrink: 1
     flex-direction: column
     justify-content: center
+    align-items: center
     position: relative
-
-.page-header__burger
-    position: absolute
-    text-align: left
-    top: 65px
-    right: 50%
-    transform: translateX(50%)
-    border: 0
-    background-color: transparent
-    cursor: pointer
-    width: 50px
-    height: 40px
-
-.page-header__burger-line
-    display: block
-    position: absolute
-    left: 0
-    width: 50px
-    height: 5px
-    background-color: #fff 
-    border-radius: 5px   
-    transition: all 0.5s
-
-.page-header__burger-line:first-child
-    top: 0
-
-.page-header__burger-line:nth-child(2)
-    top: 10px    
-
-.page-header__burger-line:nth-child(3)
-    top: 20px     
-
-.page-header__burger-line:nth-child(2):before
-    position: absolute
-    content: ""
-    opacity: 0
-
-.menu-open 
-    .page-header__burger-line:first-child
-        top: 10px
-        left: 15px
-        transform: rotate(-405deg) 
-
-    .page-header__burger-line:nth-child(2)
-        top: 10px
-        left: 3px
-        width: 22px
-
-    .page-header__burger-line:nth-child(2):before
-        content: ""
-        opacity: 1
-        transform: rotate(405deg)
-        background: none
-        border-top: 5px solid #fff 
-        border-right: 5px solid #fff 
-        height: 15px
-        width: 15px
-        top: -5px
-        right: 0    
-
-    .page-header__burger-line:nth-child(3)
-        top: 10px
-        left: 15px
-        transform: rotate(405deg)                        
-    // &::before  
-    //     content: ""
-    //     position: absolute
-    //     top: -12px
-    //     left: 0
-    //     width: 50px
-    //     height: 5px
-    //     background-color: #fff
-    //     border-radius: 5px     
-
-    // &::after  
-    //     content: ""
-    //     position: absolute
-    //     top: 12px
-    //     left: 0
-    //     width: 50px
-    //     height: 5px
-    //     background-color: #fff  
-    //     border-radius: 5px       
-
-
+    height: 100vh
+    min-height: 430px
+ 
 .page-header__social-list
     display: flex
     flex-direction: column
     list-style: none
     justify-content: space-around
+    max-width: 100%
     width: 100%
     margin: 0
     padding: 0
@@ -194,96 +102,155 @@
     margin: 0
     padding: 15px 15px
     border-radius: 50%
+    transition: all 0.1s
 
     &:hover
         background-color: $dark
         box-shadow: inset 0 0 0 2px rgba(#fff, 0.4)
 
     .page-header__social-icon
-    fill: #fff    
-    
-.page-header__menu
-    position: absolute
-    top: 0
-    right: 0
-    width: 320px
-    padding: 20px 50px
-    background-color: #4a4a4a
-    background-image: url("../../img/menu-triangle.svg")
-    background-repeat: no-repeat
-    background-position: 0 0
-    background-size: 320px 200px
-    height: 100%
-    display: flex
-    z-index: 1
-    transform: translateX(100%)
-    transition: 0.5s
-    margin-top: 1px
-    
-
-.main-menu__list
-    list-style: none
-    display: flex
-    flex-direction: column 
-    justify-content: center
-    align-items: center
-    text-align: center
-    padding: 0
-    margin: 0
-    width: 100% 
-
-.main-menu__list-item
-    display: block
-    width: 100%
-    
-
-.main-menu__link
-    display: block
-    padding: 15px 0
-    color: #fff 
-    text-decoration: none 
-    font-size: 24px
-    position: relative
-    z-index: 1
-    
-    &::before
-        content: ""
-        position: absolute
-        top: 100%
-        left: 0
-        width: 0
-        height: 4px
-        background: rgba($viol, 0.75)
-        transition: 0.7s
-        mix-blend-mode: multiply 
-
-    &::after
-        content: ""
-        position: absolute
-        top: 100%
-        right: 0
-        width: 0
-        height: 4px
-        background: rgba(#fff, 0.75)
-        transition: 0.7s
-        mix-blend-mode: multiply         
-    
-    &:hover::before
-        transform: translateX(100%)
-        width: 50%
-
-    &:hover::after
-        transform: translateX(-100%)
-        width: 50%    
+        fill: #fff      
 
 .wrapper-left
     transition: 0.5s
     transform: translateX(-320px)
 
-.menu-left
-    transition: 0.5s
-    transform: translateX(0);
-
 .name-right
     transition: 0.5s
-    transform: translate(-15%, -50%)                
+    transform: translate(0%, -50%)        
+
+
+
+@media (max-width: 1360px)
+    .page-header
+        background-size: 40% 100%
+
+    .page-header__content
+        margin-top: 100px     
+
+    .page-header__photo
+        height: 75vh
+
+    .page-header__main-title
+        font-size: 70px
+        line-height: 70px
+
+    .page-header__subtitle
+        font-size: 20px
+        line-height: 24px 
+
+    .page-header__start           
+        padding: 30px 70px 25px 70px
+
+    .page-header__social-link
+        padding: 10px 10px
+
+    .page-header__social-icon
+        width: 20px
+        height: 20px
+
+    .wrapper-left
+        transform: translateX(-200px)
+
+@media (max-width: 1200px)
+    .page-header__main-title
+        font-size: 50px
+        line-height: 50px
+
+    .page-header__subtitle
+        font-size: 18px
+        line-height: 20px     
+
+    .page-header__start           
+        padding: 25px 50px 20px 50px 
+
+@media (max-width: 992px)
+    .page-header__content
+        margin-left: 25%
+
+    .page-header__main-title
+        font-size: 40px
+        line-height: 40px
+
+    .page-header__subtitle
+        font-size: 16px
+        line-height: 18px   
+
+    .page-header__photo
+        width: 100%      
+
+    .page-header__start        
+        padding: 20px 40px 15px 40px 
+
+@media (max-width: 810px)
+    .page-header__content
+        margin-left: 30%
+
+    .page-header__main-title
+        font-size: 30px
+        line-height: 30px
+
+    .page-header__subtitle
+        font-size: 14px
+        line-height: 16px     
+
+    .page-header__start           
+       display: none
+
+    .page-header__name
+        top: 75%
+        background-color: rgba($viol, 0.4)    
+
+@media (max-width: 768px)
+    .page-header
+        background: $viol       
+
+    .page-header__content
+        margin: 75px 0 0 20px 
+
+    .page-header__name
+        padding: 15px   
+        width: 100%  
+        top: 100%                  
+        transform: translate(0%, -100%)
+        background-color: rgba($dark, 0.9)
+
+    .page-header__main-title
+        font-size: 40px
+        line-height: 40px
+
+    .page-header__subtitle
+        font-size: 16px
+        line-height: 18px
+
+    .wrapper-left
+        transition: 0.5s
+        transform: translateX(-100%)
+
+    .name-right
+        transition: 0.5s
+        transform: translate(0%, -100%)
+
+    .page-header__wrapper
+        position: relative
+        z-index: 99
+
+    .social-fixed
+        position: fixed
+        z-index: 999
+        top: 0
+        bottom: 0
+        right: -120px
+        background-color: $viol
+
+    .page-header__photo
+        min-height: 410px
+        margin-bottom: -7px    
+
+@media (max-width: 768px) and (orientation: portrait)
+    .page-header__social
+        min-height: 500px
+
+    .page-header__social-icon
+        width: 40px
+        height: 40px          

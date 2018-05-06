@@ -1,7 +1,7 @@
 {
-  "name": "sedona",
+  "name": "Portfolio",
   "version": "0.0.1",
-  "description": "project",
+  "description": "portfolio page",
   "main": "index.js",
   "scripts": {
     "build": "gulp build"

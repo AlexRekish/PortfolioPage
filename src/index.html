@@ -35,23 +35,28 @@
 		<div class="page-header__wrapper">
 			<div class="page-header__content">
 				<div class="page-header__name">
-					<h1>Алексей<br>Рекиш</h1>
+					<h1 class="page-header__main-title">Алексей<br>Рекиш</h1>
 					<b class="page-header__subtitle">Front-end developer</b>
 				</div>
-				<img src="img/photo2.jpg" class="page-header__photo" alt="">		
+				<picture data-object-fit="cover">
+					<source srcset="img/photo2@2x.webp 2x" type="image/webp" data-object-fit="cover">
+					<source srcset="img/photo2@1x.webp" type="image/webp" data-object-fit="cover">
+					<source srcset="img/photo2@2x.jpg 2x" type="image/jpeg" data-object-fit="cover">
+					<img src="img/photo2@1x.jpg" class="page-header__photo" alt="" data-object-fit="cover">		
+				</picture>
 				<a href="#" class="btn page-header__start">Познакомимся поближе?</a>
 			</div>
 			<div class="page-header__social">
-				<button type="button" class="page-header__burger">
-					<span class="page-header__burger-line"></span>
-					<span class="page-header__burger-line"></span>
-					<span class="page-header__burger-line"></span>
+				<button type="button" class="page-header__burger burger">
+					<span class="burger-line"></span>
+					<span class="burger-line"></span>
+					<span class="burger-line"></span>
 					<span class="visually-hidden">Меню</span>
 				</button>
 				<div class="page-header__social-wrapper">
 					<ul class="page-header__social-list">
 						<li class="page-header__social-item">
-							<a href="#" class="page-header__social-link">
+							<a href="https://vk.com/pikapikabitch" class="page-header__social-link" target="_blank">
 								<span class="visually-hidden">Контакт</span>
 								<svg class="page-header__social-icon" width="25" height="25">
 									<use xlink:href="img/sprite.svg#icon-vk"></use>
@@ -59,7 +64,7 @@
 							</a>
 						</li>
 						<li class="page-header__social-item">
-							<a href="#" class="page-header__social-link">
+							<a href="https://github.com/AlexRekish" class="page-header__social-link" target="_blank">
 								<span class="visually-hidden">Гитхаб</span>
 								<svg class="page-header__social-icon" width="25" height="25">
 									<use xlink:href="img/sprite.svg#icon-github"></use>
@@ -67,7 +72,7 @@
 							</a>
 						</li>
 						<li class="page-header__social-item">
-							<a href="#" class="page-header__social-link">
+							<a href="skype:mysterious295" class="page-header__social-link" target="_blank">
 								<span class="visually-hidden">Скайп</span>
 								<svg class="page-header__social-icon" width="25" height="25">
 									<use xlink:href="img/sprite.svg#icon-skype"></use>
@@ -75,7 +80,7 @@
 							</a>
 						</li>
 						<li class="page-header__social-item">
-							<a href="#" class="page-header__social-link">
+							<a href="https://t.me/PikaPikaBitch" class="page-header__social-link" target="_blank">
 								<span class="visually-hidden">Телеграм</span>
 								<svg class="page-header__social-icon" width="25" height="25">
 									<use xlink:href="img/sprite.svg#icon-telegram"></use>
@@ -83,7 +88,7 @@
 							</a>
 						</li>
 						<li class="page-header__social-item">
-							<a href="#" class="page-header__social-link">
+							<a href="#" class="page-header__social-link" target="_blank">
 								<span class="visually-hidden">Фейсбук</span>
 								<svg class="page-header__social-icon" width="25" height="25">
 									<use xlink:href="img/sprite.svg#icon-facebook"></use>
@@ -91,7 +96,7 @@
 							</a>
 						</li>
 						<li class="page-header__social-item">
-							<a href="#" class="page-header__social-link">
+							<a href="#" class="page-header__social-link" target="_blank">
 								<span class="visually-hidden">ЛинкедИн</span>
 								<svg class="page-header__social-icon" width="25" height="25">
 									<use xlink:href="img/sprite.svg#icon-linkedin"></use>

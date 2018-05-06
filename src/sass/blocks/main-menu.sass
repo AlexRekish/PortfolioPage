@@ -1,0 +1,109 @@
+@import "../_vars"
+
+.main-menu
+    display: flex
+    position: absolute
+    top: 0
+    right: 0
+    width: 320px
+    padding: 20px 50px
+    // background-color: #4a4a4a
+    background-image: url("../../img/menu-triangle.svg"), linear-gradient(to right bottom, #848484, $dark)
+    background-repeat: no-repeat
+    background-position: 0 0
+    background-size: 100% 200px, cover cover
+    height: 100vh
+    min-height: 430px
+    z-index: 1
+    transform: translateY(-100%)
+    transition: all 0.15s
+    opacity: 0
+    
+.main-menu__list
+    list-style: none
+    display: flex
+    flex-direction: column 
+    justify-content: center
+    align-items: center
+    text-align: center
+    padding: 0
+    margin: 0
+    width: 100% 
+
+.main-menu__list-item
+    display: block
+    width: 100%
+    
+.main-menu__link
+    display: block
+    padding: 15px 0
+    color: #fff 
+    text-decoration: none 
+    font-size: 24px
+    position: relative
+    z-index: 1
+    
+    &::before
+        content: ""
+        position: absolute
+        top: 100%
+        left: 0
+        width: 0
+        height: 4px
+        background: rgba($viol, 0.75)
+        transition: 0.7s
+        mix-blend-mode: multiply 
+
+    &::after
+        content: ""
+        position: absolute
+        top: 100%
+        right: 0
+        width: 0
+        height: 4px
+        background: rgba(#fff, 0.75)
+        transition: 0.7s
+        mix-blend-mode: multiply         
+    
+    &:hover::before
+        transform: translateX(100%)
+        width: 50%
+
+    &:hover::after
+        transform: translateX(-100%)
+        width: 50%      
+
+.menu-left
+    transition: all 0.75s
+    transform: translateY(0)  
+    opacity: 1
+
+@media (max-width: 1360px)
+    .main-menu
+        width: 200px
+        padding: 20px
+        background-size: auto auto, cover
+
+    .main-menu__link
+        font-size: 18px
+        padding: 10px 0  
+
+@media (max-width: 768px)
+    .main-menu
+        width: 100%
+        padding-left: 120px
+        z-index: 1
+        background-image: linear-gradient(to right bottom, #848484, $dark)
+        background-repeat: no-repeat
+        background-position: 0 0
+        background-size: cover cover
+
+    .main-menu__link
+        font-size: 30px
+        padding: 20px 0 
+
+@media (max-width: 768px) and (orientation: portrait)
+    .main-menu
+        min-height: 500px 
+
+
