@@ -31,7 +31,7 @@
 	<script src="https://cdn.polyfill.io/v2/polyfill.min.js" async></script>
 </head>
 <body class="isHome">
-	<header class="page-header">
+	<header class="page-header" id="home">
 		<div class="page-header__wrapper">
 			<div class="page-header__content">
 				<div class="page-header__name">
@@ -42,7 +42,7 @@
 					<source srcset="img/photo2@2x.webp 2x" type="image/webp" data-object-fit="cover">
 					<source srcset="img/photo2@1x.webp" type="image/webp" data-object-fit="cover">
 					<source srcset="img/photo2@2x.jpg 2x" type="image/jpeg" data-object-fit="cover">
-					<img src="img/photo2@1x.jpg" class="page-header__photo" alt="" data-object-fit="cover">		
+					<img src="img/photo2@1x.jpg" class="page-header__photo" alt="Черно-белое фото с изображением Алексея Рекиша" data-object-fit="cover">		
 				</picture>
 				<a href="#" class="btn page-header__start">Познакомимся поближе?</a>
 			</div>
@@ -57,48 +57,48 @@
 					<ul class="page-header__social-list">
 						<li class="page-header__social-item">
 							<a href="https://vk.com/pikapikabitch" class="page-header__social-link" target="_blank">
-								<span class="visually-hidden">Контакт</span>
-								<svg class="page-header__social-icon" width="25" height="25">
+								<span class="visually-hidden">VK</span>
+								<svg class="page-header__social-icon" width="25" height="25" aria-label="Иконка VK">
 									<use xlink:href="img/sprite.svg#icon-vk"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="page-header__social-item">
 							<a href="https://github.com/AlexRekish" class="page-header__social-link" target="_blank">
-								<span class="visually-hidden">Гитхаб</span>
-								<svg class="page-header__social-icon" width="25" height="25">
+								<span class="visually-hidden">GitHub</span>
+								<svg class="page-header__social-icon" width="25" height="25" aria-label="Иконка GitHub">
 									<use xlink:href="img/sprite.svg#icon-github"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="page-header__social-item">
 							<a href="skype:mysterious295" class="page-header__social-link" target="_blank">
-								<span class="visually-hidden">Скайп</span>
-								<svg class="page-header__social-icon" width="25" height="25">
+								<span class="visually-hidden">Skype</span>
+								<svg class="page-header__social-icon" width="25" height="25" aria-label="Иконка Skype">
 									<use xlink:href="img/sprite.svg#icon-skype"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="page-header__social-item">
 							<a href="https://t.me/PikaPikaBitch" class="page-header__social-link" target="_blank">
-								<span class="visually-hidden">Телеграм</span>
-								<svg class="page-header__social-icon" width="25" height="25">
+								<span class="visually-hidden">Telegram</span>
+								<svg class="page-header__social-icon" width="25" height="25" aria-label="Иконка Telegram">
 									<use xlink:href="img/sprite.svg#icon-telegram"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="page-header__social-item">
-							<a href="#" class="page-header__social-link" target="_blank">
-								<span class="visually-hidden">Фейсбук</span>
-								<svg class="page-header__social-icon" width="25" height="25">
+							<a href="https://www.facebook.com/alexeyrekish" class="page-header__social-link" target="_blank">
+								<span class="visually-hidden">Facebook</span>
+								<svg class="page-header__social-icon" width="25" height="25" aria-label="Иконка Facebook">
 									<use xlink:href="img/sprite.svg#icon-facebook"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="page-header__social-item">
 							<a href="#" class="page-header__social-link" target="_blank">
-								<span class="visually-hidden">ЛинкедИн</span>
-								<svg class="page-header__social-icon" width="25" height="25">
+								<span class="visually-hidden">LinkedIn</span>
+								<svg class="page-header__social-icon" width="25" height="25" aria-label="Иконка LinkedIn">
 									<use xlink:href="img/sprite.svg#icon-linkedin"></use>
 								</svg>
 							</a>
@@ -110,10 +110,10 @@
 		<nav class="page-header__menu main-menu">
 			<ul class="main-menu__list">
 				<li class="main-menu__list-item">
-					<a href="#" class="main-menu__link">Главная</a>
+					<a href="#home" class="main-menu__link">Главная</a>
 				</li>
 				<li class="main-menu__list-item">
-					<a href="#" class="main-menu__link">Обо мне</a>
+					<a href="#who-i-am" class="main-menu__link">Обо мне</a>
 				</li>
 				<li class="main-menu__list-item">
 					<a href="#" class="main-menu__link">Мои навыки</a>
@@ -131,6 +131,88 @@
 		</nav>
 
 	</header>
+	<article class="who-i-am" id="who-i-am">
+		<h2 class="visually-hidden">Все о том, кто я</h2>
+		<div class="tabs-container">
+			<button class="who-i-am__tabs checked">
+				<span class="visually-hidden">Добро пожаловать</span>
+			</button>
+			<button class="who-i-am__tabs">
+				<span class="visually-hidden">Обо мне</span>
+			</button>
+			<button class="who-i-am__tabs">
+				<span class="visually-hidden">Контакты</span>
+			</button>
+			<button class="who-i-am__tabs">
+				<span class="visually-hidden">Увлечения</span>
+			</button>
+		</div>
+		<section class="who-i-am__section who-i-am__section--about-me checked">
+			<div class="who-i-am__image">
+				<img src="img/welcome2.jpg" alt="">
+			</div>
+			<div class="who-i-am__content">
+				<h2 class="who-i-am__title">Добро пожаловать</h2>
+				<p>Добро пожаловать на мой сайт. Меня зовут Алексей Рекиш. Я начинающий front-end разработчик, JavaScript энтузиаст и любитель котиков. Здесь вы можете найти немного информации обо мне, просмотреть мои работы и резюме или написать мне письмо. Приятного просмотра!</p>
+			</div>
+		</section>
+		<section class="who-i-am__section who-i-am__section--education">
+			<div class="who-i-am__image">
+				<img src="img/photo2@1x.jpg" alt="">
+			</div>
+			<div class="who-i-am__content">
+				<h2 class="who-i-am__title">Обо мне</h2>
+				<p>Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Инициал, рукопись грустный себя знаках, пояс образ даже вдали решила последний, предупредила буквоград заглавных парадигматическая большого курсивных коварных пустился сих. Ipsum там, мир которой коварных языком от всех ее, эта, обеспечивает путь родного жизни не журчит она? Мир рукопись возвращайся однажды его заголовок гор заманивший, сих раз злых над. Раз обеспечивает агентство маленький то, единственное взобравшись. Маленькая своих толку лучше! Запятой предупредила пунктуация большой великий дорогу если все взгляд! Текстов всемогущая свое грустный своих, снова повстречался рукописи переписали текст предложения пояс послушавшись своего возвращайся парадигматическая всеми, если, языком дороге. Пунктуация, снова. Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Она своих, там имеет коварных имени буквоград вопроса большого живет однажды но грамматики ему?</p>
+			</div>
+		</section>
+		<section class="who-i-am__section who-i-am__section--contacts">
+			<div class="who-i-am__image">
+				<img src="img/contacts.jpg" alt="">
+			</div>
+			<div class="who-i-am__content">
+				<h2 class="who-i-am__title">Контакты</h2>
+				<ul class="who-i-am__contacts-list contacts-list">
+					<li class="contacts-list__item">
+						Контактный телефон:
+						<a href="tel:+375293368861" class="contacts-list__link" target="_blank">+375293368861</a>
+					</li>
+					<li class="contacts-list__item">
+						Электронная почта:
+						<a href="mailto:alexeyrekish@gmail.com" class="contacts-list__link" target="_blank">
+							alexeyrekish@gmail.com
+						</a></li>
+					<li class="contacts-list__item">
+						Skype:
+						<a href="skype:mysterious295" class="contacts-list__link" target="_blank">
+							mysterious295
+						</a>
+					</li>
+					<li class="contacts-list__item">
+						Telegram:
+						<a href="https://t.me/PikaPikaBitch" class="contacts-list__link" target="_blank">
+							@PikaPikaBitch
+						</a>
+					</li>
+					<li class="contacts-list__item">
+						Facebook:
+						<a href="https://www.facebook.com/alexeyrekish" class="contacts-list__link" target="_blank">
+							Алексей Рекиш
+						</a>
+						
+					</li>
+				</ul>	
+			</div>
+		</section>
+		<section class="who-i-am__section who-i-am__section--hobbies">
+			<div class="who-i-am__image">
+				<img src="img/hobby.jpg" alt="">
+			</div>
+			<div class="who-i-am__content">
+				<h2 class="who-i-am__title">Мои увлечения</h2>
+				<p>Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Инициал, рукопись грустный себя знаках, пояс образ даже вдали решила последний, предупредила буквоград заглавных парадигматическая большого курсивных коварных пустился сих. Ipsum там, мир которой коварных языком от всех ее, эта, обеспечивает путь родного жизни не журчит она? Мир рукопись возвращайся однажды его заголовок гор заманивший, сих раз злых над. Раз обеспечивает агентство маленький то, единственное взобравшись. Маленькая своих толку лучше! Запятой предупредила пунктуация большой великий дорогу если все взгляд! Текстов всемогущая свое грустный своих, снова повстречался рукописи переписали текст предложения пояс послушавшись своего возвращайся парадигматическая всеми, если, языком дороге. Пунктуация, снова. Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Она своих, там имеет коварных имени буквоград вопроса большого живет однажды но грамматики ему?</p>
+			</div>
+		</section>
+	</article>
 	<script src="js/scripts.min.js"></script>
 </body>
 </html>

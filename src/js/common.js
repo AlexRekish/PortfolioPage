@@ -4,15 +4,55 @@
     var content = document.querySelector('.page-header__wrapper');
     var name = document.querySelector('.page-header__name');
     var social = document.querySelector('.page-header__social');
+    var tabs = document.querySelectorAll('.who-i-am__tabs');
+    var tabsContainer = document.querySelector('.tabs-container')
+    var tabsSections = document.querySelectorAll('.who-i-am__section');
 
-    burger.addEventListener('click', function() {
+    // function switchTabs(evt) {
+    //     var tab = evt.currentTarget.indexOf(tabs);
+    //     var section = tabsSections[tab];
+    // }
+
+    burger.addEventListener('click', function(evt) {
+        evt.preventDefault();
         content.classList.toggle('wrapper-left');
         name.classList.toggle('name-right');
         burger.classList.toggle('menu-open');
         menu.classList.toggle('menu-left');
         social.classList.toggle('social-fixed');
-
     })
+
+    tabsContainer.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        var targetTab = evt.target;
+        var index;
+        for (var k = 0; k < tabs.length; k++ ) {
+            if (tabs[k] === targetTab) {
+                index = k;
+            }
+        }
+
+        var section = tabsSections[index];
+
+        if (!evt.target.classList.contains('checked')) {
+            tabsContainer.classList.add('checked');
+            setTimeout(function () {
+                tabsContainer.classList.remove('checked');
+            }, 2000);
+        }
+
+        for (var i = 0; i < tabs.length; i++ ) {
+            tabs[i].classList.remove('checked');
+        }
+
+        for (var j = 0; j < tabsSections.length; j++) {
+            tabsSections[j].classList.remove('checked');
+        }
+        
+        tabs[index].classList.add('checked');
+        tabsSections[index].classList.add('checked');
+    });
+
 })();
 
 //SVG POLYFILL

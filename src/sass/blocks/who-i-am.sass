@@ -1,0 +1,340 @@
+@import "../_vars"
+.who-i-am
+    width: 100%
+    position: relative
+    background-color: $grey
+    padding: 150px
+    overflow: hidden
+    min-height: 100vh
+    background-image: url("../../img/about-triangle.svg")
+    background-position: center bottom
+    background-repeat: no-repeat
+    background-size: 100%
+    margin-top: -1px
+
+.tabs-container
+    display: flex
+    position: absolute
+    top: 100px
+    right: 200px
+    transform: translate(0,-100%)
+    // margin-right: 150px
+    width: 40%
+    align-items: center
+    z-index: 1
+    transition: 1s
+    // overflow: hidden
+
+.who-i-am__tabs
+    font-family: $header
+    position: relative
+    font-weight: 500
+    font-size: 24px
+    line-height: 24px
+    height: 35px
+    padding: 5px 25px
+    border: none
+    border-right: 1px solid $grey
+    width: 25%
+    white-space: nowrap
+    text-align: center
+    cursor: pointer
+    background-color: #200132
+    border-radius: 5px 5px 0 0
+    flex-shrink: 1
+    transition: all 0.4s
+    &:hover,
+    &:focus
+        width: 35%
+        flex-shrink: 0   
+
+    &::before,
+        content: ""
+        width: 25px
+        height: 25px
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        // background-image: url(../../img/logo/employee.svg)
+        background-repeat: no-repeat
+        background-size: 25px 25px 
+        transition: all 0.5s linear
+        opacity: 1
+
+    &:hover::before,
+    &:focus::before
+        opacity: 0
+        transition: all 0.5s 
+         
+    &::after
+        position: absolute
+        top: 50%
+        left: 50%
+        font-family: $header
+        font-size: 0
+        line-height: 20px
+        color: #fff
+        transition: all 0.5s
+        opacity: 0
+        transform: translate(-50%, -50%)
+
+    &:hover::after,
+    &:focus::after
+        font-size: 20px
+        opacity: 1
+        transition: all 0.5s    
+    
+    &:nth-child(1)::before
+        background-size: 25px 25px 
+        background-image: url(../../img/logo/welcome.svg)
+
+    &:nth-child(1)::after
+        content: "Приветствую"
+        
+    &:nth-child(2)::before
+        background-image: url(../../img/logo/employee.svg)
+
+    &:nth-child(2)::after
+        content: "Обо мне"
+
+    &:nth-child(3)::before
+        background-image: url(../../img/logo/mail.svg)
+
+    &:nth-child(3)::after
+        content: "Контакты"
+
+    &:nth-child(4)::before
+        background-image: url(../../img/logo/icon-coding.svg)
+
+    &:nth-child(4)::after
+        content: "Хобби"
+          
+.who-i-am__title
+    font-weight: 700
+    font-size: 60px  
+    line-height: 80px  
+    white-space: nowrap
+    margin: 0
+    padding: 30px 0
+
+.who-i-am__section
+    width: 86%
+    // margin: 0 auto
+    display: flex
+    position: absolute
+    top: 100px
+    bottom: 150px
+    left: 50%
+    transition: transform 0.5s ease 0.5s
+    transform: translateX(-200%)
+    background-color: $viol
+    margin-top: -1px
+    z-index: 2
+    overflow: hidden
+    clip-path: polygon(0 20%, 0 100%, 100% 100%, 100% 0, 25% 0)
+
+.who-i-am__content:nth-child(2)
+    background-color: $viol
+
+.who-i-am__image
+    width: 45%
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    // &::after
+    //     content: ""
+    //     position: absolute
+    //     width: 50px
+    //     height: 100%
+    //     top: 0
+    //     right: -1px
+    //     background-image: url("../../img/img-triangle.svg")
+    //     background-repeat: no-repeat
+    //     background-size: cover
+    //     background-position: right center
+    
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        filter: grayscale(100%)
+
+.who-i-am__content
+    width: 55%
+    padding: 50px 100px 
+    padding-bottom: 10px
+    font-size: 20px
+    line-height: 30px
+    background-color: $dark   
+    overflow-y: auto    
+
+.who-i-am__section.checked
+    transform: translateX(-50%)
+    transition: transform 0.5s ease 1s  
+
+    
+
+@keyframes tabs
+    0%  
+        transform-origin: bottom
+        transform: translate(0,-100%) scaleY(1)
+
+    20%
+        transform: translate(0,-100%) scaleY(0)
+
+    80%
+        transform: translate(0,-100%) scaleY(0)
+
+    100%
+        transform-origin: bottom
+        transform: translate(0,-100%) scaleY(1)              
+
+.who-i-am__tabs.checked
+    background-color: $viol    
+    border-bottom: 0
+    width: 35%
+    min-width: 35%
+    &::before
+        left: 10%
+
+    &::after
+        opacity: 1
+        font-size: 20px
+        padding-left: 15px
+
+    &:hover::before,
+    &:focus::before 
+        opacity: 1 
+
+    &:hover,
+    &:focus
+        width: 35%
+        flex-shrink: 1   
+
+.tabs-container.checked
+    animation: tabs 2s
+
+@media (max-width: 1600px)
+    .who-i-am__section
+        top: 85px
+        bottom: 100px
+
+    .who-i-am__title
+        font-size: 50px
+        line-height: 60px
+
+    .who-i-am__image
+        width: 35%
+
+    .who-i-am__content
+        width: 65%
+        font-size: 18px
+        line-height: 24px    
+        padding: 40px 75px    
+        padding-bottom: 10px   
+
+    .tabs-container
+        top: 85px    
+
+@media (max-width: 1200px)
+    .who-i-am__section
+        top: 70px
+        bottom: 70px
+
+    .tabs-container
+        top: 70px
+
+    .who-i-am__tabs
+        &:hover::before,
+        &:focus::before
+            opacity: 1
+            transition: all 0.5s   
+
+        &:hover::after,
+        &:focus::after
+            font-size: 0
+            opacity: 0
+            transition: all 0.5s       
+
+    .who-i-am__tabs.checked
+        &::before
+            left: 50%
+        
+        &::after
+            opacity: 0
+            font-size: 0    
+
+    .tabs-container
+        right: 150px    
+
+    .who-i-am__title
+        font-size: 40px
+        line-height: 50px  
+        white-space: pre-wrap
+
+    .who-i-am__image
+        width: 40%    
+
+    .who-i-am__content    
+        font-size: 16px
+        line-height: 20px       
+        padding: 25px 50px
+        width: 60%
+        padding-bottom: 10px
+
+@media (max-width: 768px)
+
+    .who-i-am__section
+        width: calc(100% - 60px)
+        top: 30px
+        bottom: 40px
+        clip-path: none
+        // margin: 0 10px 0 50px
+
+    .who-i-am__section.checked
+        transform: translateX(calc(-50% + 30px))
+
+    .who-i-am__image
+        display: none
+
+    .who-i-am__content
+        width: 100%  
+        font-size: 18px
+        line-height: 24px  
+        padding: 30px 
+        padding-bottom: 10px
+
+    .tabs-container
+        flex-direction: column
+        width: 40px
+        left: 60px
+        transform: translate(-100%, -100%)
+        top: 70%
+
+    .who-i-am__tabs
+        border-radius: 5px 0 0 5px   
+        height: 50px 
+
+    @keyframes tabs
+        0%  
+            transform-origin: right
+            transform: translate(-100%,-100%) scaleX(1)
+
+        20%
+            transform: translate(0,-100%) scaleX(0)
+
+        80%
+            transform: translate(0,-100%) scaleX(0)
+
+        100%
+            transform-origin: right
+            transform: translate(-100%,-100%) scaleX(1)     
+                               
+    .who-i-am__title
+        padding: 0
+        padding-bottom: 20px
+        font-size: 30px
+        line-height: 40px
+
