@@ -10,7 +10,7 @@
     background-position: center bottom
     background-repeat: no-repeat
     background-size: 100%
-    margin-top: -1px
+    margin-top: -1.02px
 
 .tabs-container
     display: flex
@@ -72,7 +72,7 @@
         top: 50%
         left: 50%
         font-family: $header
-        font-size: 0
+        font-size: 20px
         line-height: 20px
         color: #fff
         transition: all 0.5s
@@ -81,12 +81,11 @@
 
     &:hover::after,
     &:focus::after
-        font-size: 20px
+        // font-size: 20px
         opacity: 1
         transition: all 0.5s    
     
     &:nth-child(1)::before
-        background-size: 25px 25px 
         background-image: url(../../img/logo/welcome.svg)
 
     &:nth-child(1)::after
@@ -126,13 +125,14 @@
     top: 100px
     bottom: 150px
     left: 50%
-    transition: transform 0.5s ease 0.5s
+    transition: all 0.5s ease 0.5s
     transform: translateX(-200%)
     background-color: $viol
     margin-top: -1px
     z-index: 2
     overflow: hidden
     clip-path: polygon(0 20%, 0 100%, 100% 100%, 100% 0, 25% 0)
+    visibility: hidden
 
 .who-i-am__content:nth-child(2)
     background-color: $viol
@@ -143,18 +143,7 @@
     justify-content: center
     align-items: center
     position: relative
-    // &::after
-    //     content: ""
-    //     position: absolute
-    //     width: 50px
-    //     height: 100%
-    //     top: 0
-    //     right: -1px
-    //     background-image: url("../../img/img-triangle.svg")
-    //     background-repeat: no-repeat
-    //     background-size: cover
-    //     background-position: right center
-    
+
     img
         width: 100%
         height: 100%
@@ -170,11 +159,10 @@
     background-color: $dark   
     overflow-y: auto    
 
-.who-i-am__section.checked
+.who-i-am__section.active
     transform: translateX(-50%)
-    transition: transform 0.5s ease 1s  
-
-    
+    transition: all 0.5s ease 1s  
+    visibility: visible
 
 @keyframes tabs
     0%  
@@ -191,7 +179,7 @@
         transform-origin: bottom
         transform: translate(0,-100%) scaleY(1)              
 
-.who-i-am__tabs.checked
+.who-i-am__tabs.active
     background-color: $viol    
     border-bottom: 0
     width: 35%
@@ -201,7 +189,7 @@
 
     &::after
         opacity: 1
-        font-size: 20px
+        // font-size: 20px
         padding-left: 15px
 
     &:hover::before,
@@ -213,7 +201,7 @@
         width: 35%
         flex-shrink: 1   
 
-.tabs-container.checked
+.tabs-container.active
     animation: tabs 2s
 
 @media (max-width: 1600px)
@@ -258,7 +246,7 @@
             opacity: 0
             transition: all 0.5s       
 
-    .who-i-am__tabs.checked
+    .who-i-am__tabs.active
         &::before
             left: 50%
         
@@ -293,7 +281,7 @@
         clip-path: none
         // margin: 0 10px 0 50px
 
-    .who-i-am__section.checked
+    .who-i-am__section.active
         transform: translateX(calc(-50% + 30px))
 
     .who-i-am__image

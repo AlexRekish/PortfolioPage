@@ -83,7 +83,7 @@ gulp.task('styles', function() {
 gulp.task('js', function() {
 	return gulp.src([
 		// 'src/libs/jquery/dist/jquery.min.js',
-		'src/js/common.js', // Always at the end
+		'src/js/*.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
 	.pipe(uglify()) // Mifify js (opt.)

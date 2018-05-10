@@ -18,6 +18,7 @@
     transform: translateY(-100%)
     transition: all 0.15s
     opacity: 0
+    visibility: hidden
     
 .main-menu__list
     list-style: none
@@ -73,10 +74,11 @@
         transform: translateX(-100%)
         width: 50%      
 
-.menu-left
+.main-menu--open
     transition: all 0.75s
     transform: translateY(0)  
     opacity: 1
+    visibility: visible
 
 @media (max-width: 1360px)
     .main-menu
