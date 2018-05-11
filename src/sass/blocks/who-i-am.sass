@@ -47,6 +47,7 @@
     &:focus
         width: 35%
         flex-shrink: 0   
+        outline: 0
 
     &::before,
         content: ""
@@ -127,22 +128,23 @@
     left: 50%
     transition: all 0.5s ease 0.5s
     transform: translateX(-200%)
-    background-color: $viol
+    background-color: $grey
     margin-top: -1px
     z-index: 2
     overflow: hidden
-    clip-path: polygon(0 20%, 0 100%, 100% 100%, 100% 0, 25% 0)
     visibility: hidden
+    justify-content: space-between
 
-.who-i-am__content:nth-child(2)
-    background-color: $viol
+// .who-i-am__content:nth-child(2)
+//     background-color: $viol
 
 .who-i-am__image
-    width: 45%
+    width: 44%
     display: flex
     justify-content: center
     align-items: center
     position: relative
+    clip-path: polygon(25% 0%, 100% 0, 100% 100%, 25% 100%, 0% 50%);
 
     img
         width: 100%
@@ -156,8 +158,10 @@
     padding-bottom: 10px
     font-size: 20px
     line-height: 30px
-    background-color: $dark   
-    overflow-y: auto    
+    // background-color: $dark   
+    overflow-y: auto
+    background-image: linear-gradient(to bottom, $viol, transparent)
+    // clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 75% 90%, 75% 100%, 50% 90%, 0 90%);    
 
 .who-i-am__section.active
     transform: translateX(-50%)

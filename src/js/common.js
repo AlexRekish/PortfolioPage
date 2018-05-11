@@ -15,6 +15,7 @@
         name.classList.toggle('page-header__name--right');
         burger.classList.toggle('burger--open');
         menu.classList.toggle('main-menu--open');
+        social.classList.toggle('page-header__social--left');
         social.classList.toggle('page-header__social--fixed');
     })
 

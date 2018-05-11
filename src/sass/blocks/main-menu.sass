@@ -8,10 +8,10 @@
     width: 320px
     padding: 20px 50px
     // background-color: #4a4a4a
-    background-image: url("../../img/menu-triangle.svg"), linear-gradient(to right bottom, $grey, $dark)
+    background-image: linear-gradient(to bottom, $grey, transparent)
     background-repeat: no-repeat
     background-position: 0 0
-    background-size: 100% 200px, cover cover
+    background-size: cover cover
     height: 100vh
     min-height: 430px
     z-index: 1
@@ -74,6 +74,9 @@
         transform: translateX(-100%)
         width: 50%      
 
+    &:focus
+        background-color: $viol    
+
 .main-menu--open
     transition: all 0.75s
     transform: translateY(0)  
@@ -93,6 +96,8 @@
 @media (max-width: 768px)
     .main-menu
         width: 100%
+        padding: 0
+        margin: 0
         padding-left: 120px
         z-index: 800
         background-image: linear-gradient(to right bottom, #848484, $dark)
@@ -108,6 +113,21 @@
     .main-menu__link
         font-size: 30px
         padding: 20px 0 
+
+        &:hover::before
+            transform: translateX(0)
+            width: 0
+
+        &:hover::after
+            transform: translateX(0)
+            width: 0     
+
+        &:hover,
+        &:focus
+            background-color: $dark-viol
+
+        &:active
+            background-color: $viol     
 
 @media (max-width: 768px) and (orientation: portrait)
     .main-menu

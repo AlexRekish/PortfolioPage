@@ -1,17 +1,18 @@
 @import "../_vars"
 
 .page-header
-    background-image: url("../../img/header-triangle.svg"), url("../../img/header-bg2.svg"), url("../../img/code.jpg")
+    background-image: url("../../img/header-triangle.svg"), linear-gradient(to right, transparent, $viol), url("../../img/code.jpg")
     background-repeat: no-repeat
     background-position: 50% 100%, right bottom, 0% 50%
     background-size: 1903px 101px, 30% 100%, cover
     height: 100vh
     margin: 0
     padding: 0
+    position: relative
 
 .page-header__wrapper
-    max-width: 100%
-    width: 100%
+    max-width: calc(100% - 120px)
+    width: calc(100% - 120px)
     display: flex
     justify-content: space-between
     overflow: hidden
@@ -23,8 +24,8 @@
     margin: 150px 0 0 20%
     width: 65%
     height: 65%
-    max-width: 1320px
-    max-height: 745px  
+    max-width: 70%
+    max-height: 59%  
 
     & picture
         width: 100%
@@ -68,6 +69,9 @@
     text-transform: uppercase
 
 .page-header__social
+    position: absolute
+    top: 0
+    right: 0
     width: 120px
     padding: 70px 20px 0 20px
     display: flex
@@ -75,9 +79,10 @@
     flex-direction: column
     justify-content: center
     align-items: center
-    position: relative
+    // position: relative
     height: 100vh
     min-height: 430px
+    transition: 0.5s
  
 .page-header__social-list
     display: flex
@@ -96,7 +101,7 @@
     padding: 5px 0    
 
 .page-header__social-link
-    display: inline-block
+    display: inline-block 
     background-color: rgba($dark, 0.7)
     line-height: 0
     margin: 0
@@ -104,24 +109,66 @@
     border-radius: 50%
     transition: all 0.1s
 
-    &:hover
-        background-color: $dark
-        box-shadow: inset 0 0 0 2px rgba(#fff, 0.4)
+    // &:hover
+    //     background-color: $dark
+
+    @supports (clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%))
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+        border-radius: 0
 
     .page-header__social-icon
         fill: #fff      
+
+.page-header__social-item:nth-child(1) .page-header__social-link
+    &:hover,
+    &:focus
+        background-color: #4a76a8
+
+.page-header__social-item:nth-child(2) .page-header__social-link
+    &:hover,
+    &:focus
+        background-color: #24292e
+
+.page-header__social-item:nth-child(3) .page-header__social-link
+    &:hover,
+    &:focus
+        background-color: #1686d9
+
+.page-header__social-item:nth-child(4) .page-header__social-link
+    &:hover,
+    &:focus
+        background-color: #5682a3
+
+.page-header__social-item:nth-child(5) .page-header__social-link
+    &:hover,
+    &:focus
+        background-color: #4267b2
+
+.page-header__social-item:nth-child(6) .page-header__social-link
+    &:hover,
+    &:focus
+        background-color: #0077b5
 
 .page-header__wrapper--left
     transition: 0.5s
     transform: translateX(-320px)
 
+.page-header__social--left
+    transform: translate(-320px, 0);    
+
+    .page-header__social-link
+        transition: all 0.3s
+        background-color: rgba($viol, 0.9)
+
 .page-header__name--right
     transition: 0.5s
     transform: translate(0%, -50%)        
 
+// MEDIA *********************************************************    
+
 @media (max-width: 1360px)
     .page-header
-        background-size: auto, 40% 100%
+        background-size: auto, 40% 100%, cover
 
     .page-header__content
         margin-top: 100px     
@@ -208,7 +255,13 @@
         background-size: 1903px 101px
               
     .page-header__content
-        margin: 75px 0 0 20px 
+        margin: 20px 0 0 20px
+        width: 100%
+        max-width: 100%
+        
+    .page-header__photo
+        clip-path: none 
+        height: 90vh
 
     .page-header__name
         padding: 15px   
@@ -235,19 +288,25 @@
 
     .page-header__wrapper--left
         transition: 0.5s
-        transform: translateX(calc(-100% + 120px))
+        transform: translateX(-100%)
         position: fixed
-        top: 0
-        height: 100vh    
+
+    .page-header__social--left
+        transform: translate(0, 0)    
+
+        .page-header__social-link
+            transition: all 0.3s
+            background-color: rgba($dark, 0.7)
 
     .page-header__social--fixed
         position: fixed
         z-index: 999
         top: 0
         bottom: 0
-        right: 0
+        left: 0
         height: 100%
         background-color: $viol
+
 
     .page-header__photo
         min-height: 410px
@@ -258,5 +317,5 @@
         // min-height: 500px
 
     .page-header__social-icon
-        width: 40px
-        height: 40px          
+        width: 30px
+        height: 30px          
