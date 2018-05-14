@@ -8,6 +8,8 @@
     var tabsContainer = document.querySelector('.tabs-container')
     var tabsSections = document.querySelectorAll('.who-i-am__section');
     var menuLinks = document.querySelectorAll('.main-menu__link');
+    var place = document.querySelector('.skills');
+    var skills = document.querySelectorAll('.skills__my-skill');
 
     burger.addEventListener('click', function(evt) {
         evt.preventDefault();
@@ -82,8 +84,25 @@
             name.classList.toggle('page-header__name--right');
             burger.classList.toggle('burger--open');
             menu.classList.toggle('main-menu--open');
+            social.classList.toggle('page-header__social--left');
             social.classList.toggle('page-header__social--fixed');
         });
     }
     // history.pushState('', document.title, window.location.pathname);
+
+    window.onscroll = function () {
+        var placeSourceBottom = place.getBoundingClientRect().top + window.pageYOffset - (skills[0].offsetHeight) / 4;
+        if (window.pageYOffset > placeSourceBottom) {
+            for (var i = 0; i < skills.length; i++) {
+                if (window.pageYOffset > placeSourceBottom) {
+                    skills[i].classList.add('skills_my-skill--open');
+                    placeSourceBottom += skills[i].offsetHeight;
+                } else {
+                    skills[i].classList.remove('skills_my-skill--open');
+                    }
+            } 
+        } else {
+            skills[0].classList.remove('skills_my-skill--open');
+        }        
+    }    
 })();

@@ -1,7 +1,7 @@
 @import "../_vars"
 
 .page-header
-    background-image: url("../../img/header-triangle.svg"), linear-gradient(to right, transparent, $viol), url("../../img/code.jpg")
+    background-image: url("../../img/header-triangle.svg"), linear-gradient(to right, transparent, $viol), url("../../img/code@1x.jpg")
     background-repeat: no-repeat
     background-position: 50% 100%, right bottom, 0% 50%
     background-size: 1903px 101px, 30% 100%, cover
@@ -9,6 +9,9 @@
     margin: 0
     padding: 0
     position: relative
+    
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
+        background-image: url("../../img/header-triangle.svg"), linear-gradient(to right, transparent, $viol), url("../../img/code@2x.jpg")
 
 .page-header__wrapper
     max-width: calc(100% - 120px)
@@ -37,6 +40,7 @@
     height: auto
     object-fit: cover
     clip-path: polygon(0 20%, 0 100%, 75% 100%, 100% 80%, 100% 0, 25% 0)
+    font-family: 'object-fit: cover;'
 
 .page-header__start
     position: absolute
@@ -168,7 +172,11 @@
 
 @media (max-width: 1360px)
     .page-header
+        background-image: url("../../img/header-triangle.svg"), linear-gradient(to right, transparent, $viol), url("../../img/code@0.75x.jpg")
         background-size: auto, 40% 100%, cover
+        
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
+            background-image: url("../../img/header-triangle.svg"), linear-gradient(to right, transparent, $viol), url("../../img/code@1.5x.jpg")
 
     .page-header__content
         margin-top: 100px     
@@ -197,6 +205,9 @@
     .page-header__wrapper--left
         transform: translateX(-200px)
 
+    .page-header__social--left
+        transform: translate(-200px, 0);      
+
 @media (max-width: 1200px)
     .page-header__main-title
         font-size: 50px
@@ -210,6 +221,13 @@
         padding: 25px 50px 20px 50px 
 
 @media (max-width: 992px)
+    .page-header
+        background-image: url("../../img/header-triangle.svg"), linear-gradient(to right, transparent, $viol), url("../../img/code@0.5x.jpg")
+        background-size: auto, 40% 100%, cover
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
+            background-image: url("../../img/header-triangle.svg"), linear-gradient(to right, transparent, $viol), url("../../img/code@1x.jpg")
+
     .page-header__content
         margin-left: 25%
 
