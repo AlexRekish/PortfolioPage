@@ -4,11 +4,16 @@
     flex-direction: column
     justify-content: center
     padding: 50px
-    padding-bottom: 25vh
+    padding-bottom: 50vh
     min-height: 50vh
     position: relative
     overflow: hidden
-
+    transition: all 0.5s
+    background-image: url("")
+    background-position: center bottom
+    background-repeat: no-repeat
+    background-size: auto 100px
+    
 .skills__header
     display: block
     background-color: $dark
@@ -37,6 +42,7 @@
 
     &:nth-child(even)
         transform: translate(-150%, 0)
+        flex-direction: row-reverse
         // background-image: url("../../img/logo/chatleft.svg")
         // background-repeat: no-repeat
         // background-size: cover 
@@ -44,7 +50,6 @@
 
     &:nth-child(odd)
         transform: translate(150%, 0)    
-        flex-direction: row-reverse
         // background-image: url("../../img/logo/chatright.svg")
         // background-repeat: no-repeat
         // background-size: 100%
@@ -54,7 +59,7 @@
     position: relative
     visibility: visible
     opacity: 1
-    transition: all 0.5s    
+    transition: all 0.5s  
     transform: translate(0, 0)
 
 .skills__section-header
@@ -111,7 +116,7 @@
         width: 100%
         padding: 0
         
-        &:nth-child(odd)
+        &:nth-child(even)
             flex-direction: column
 
     .skills__section-header
@@ -119,7 +124,10 @@
 
     .skills__img-wrapper
         width: 100%
-        padding: 30px
+        padding: 15px
+
+    .skills__skill-img       
+        height: 80px
 
     .skills__skill-description
         width: 100%      

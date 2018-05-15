@@ -91,7 +91,7 @@
     // history.pushState('', document.title, window.location.pathname);
 
     window.onscroll = function () {
-        var placeSourceBottom = place.getBoundingClientRect().top + window.pageYOffset - (skills[0].offsetHeight) / 4;
+        var placeSourceBottom = place.getBoundingClientRect().top + window.pageYOffset - (skills[0].offsetHeight) - document.querySelector('.skills__header').offsetHeight / 2;
         if (window.pageYOffset > placeSourceBottom) {
             for (var i = 0; i < skills.length; i++) {
                 if (window.pageYOffset > placeSourceBottom) {
@@ -104,5 +104,48 @@
         } else {
             skills[0].classList.remove('skills_my-skill--open');
         }        
-    }    
+    }
+    
+    var works = document.querySelectorAll('.my-works__work');
+    var sliderNext = document.querySelector('.my-works__slider-button--next');
+    var sliderPrev = document.querySelector('.my-works__slider-button--prev');
+    // console.log(works, sliderNext, sliderPrev);
+
+    sliderNext.addEventListener('click', function(evt) {
+        evt.preventDefault();
+        console.log('1');
+        for(var i = 0; i < works.length; i++) {
+            if (works[i].classList.contains('my-works__work--active')) {
+                if ([i + 1] < works.length) {
+                    works[i].classList.remove('my-works__work--active');
+                    works[i + 1].classList.add('my-works__work--active');
+                    break;
+                }   else {
+                        works[i].classList.remove('my-works__work--active');  
+                        works[0].classList.add('my-works__work--active'); 
+                        break;
+                }
+            }
+        }
+    });
+
+    sliderPrev.addEventListener('click', function(evt) {
+        evt.preventDefault();
+        console.log('1');
+        for(var i = 0; i < works.length; i++) {
+            if (works[i].classList.contains('my-works__work--active')) {
+                if ([i - 1] >= 0) {
+                    works[i].classList.remove('my-works__work--active');
+                    works[i - 1].classList.add('my-works__work--active');
+                    break;
+                }   else {
+                        works[i].classList.remove('my-works__work--active');  
+                        works[works.length - 1].classList.add('my-works__work--active'); 
+                        break;
+                }
+                   
+            }
+        }
+    });
+
 })();
