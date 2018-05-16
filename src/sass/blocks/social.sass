@@ -1,0 +1,124 @@
+@import "../_vars"
+.social
+    position: absolute
+    top: 0
+    right: 0
+    width: 120px
+    padding: 70px 20px 0 20px
+    display: flex
+    flex-shrink: 1
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    // position: relative
+    height: 100vh
+    min-height: 430px
+    transition: 0.5s
+    z-index: 1
+ 
+.social-list
+    display: flex
+    flex-direction: column
+    list-style: none
+    justify-content: space-around
+    max-width: 100%
+    width: 100%
+    margin: 0
+    padding: 0
+    text-align: center
+
+.social-item
+    display: block
+    width: 100%
+    padding: 5px 0    
+
+.social-link
+    display: inline-block 
+    background-color: rgba($dark, 0.7)
+    line-height: 0
+    margin: 0
+    padding: 15px 15px
+    border-radius: 50%
+    transition: all 0.1s
+
+    // &:hover
+    //     background-color: $dark
+
+    @supports (clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%))
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+        border-radius: 0
+
+    .social-icon
+        fill: #fff      
+
+.social-item:nth-child(1) .social-link
+    &:hover,
+    &:focus
+        background-color: #4a76a8
+
+.social-item:nth-child(2) .social-link
+    &:hover,
+    &:focus
+        background-color: #24292e
+
+.social-item:nth-child(3) .social-link
+    &:hover,
+    &:focus
+        background-color: #1686d9
+
+.social-item:nth-child(4) .social-link
+    &:hover,
+    &:focus
+        background-color: #5682a3
+
+.social-item:nth-child(5) .social-link
+    &:hover,
+    &:focus
+        background-color: #4267b2
+
+.social-item:nth-child(6) .social-link
+    &:hover,
+    &:focus
+        background-color: #0077b5
+
+.social--left
+    transform: translate(-320px, 0);    
+
+    .social-link
+        transition: all 0.3s
+        background-color: rgba($viol, 0.9)
+
+@media (max-width: 1360px)
+    .social-link
+        padding: 10px 10px
+
+        .social-icon
+            width: 20px
+            height: 20px
+
+    .social--left
+            transform: translate(-200px, 0);      
+
+@media (max-width: 768px) 
+    .social--left
+        transform: translate(0, 0)    
+
+        .social-link
+            transition: all 0.3s
+            background-color: rgba($dark, 0.7)
+
+    .social--fixed
+        position: fixed
+        z-index: 999
+        top: 0
+        bottom: 0
+        left: 0
+        height: 100%
+        background-color: $viol
+
+@media (max-width: 768px) and (orientation: portrait)
+    .social
+        // min-height: 500px
+        .social-icon
+            width: 30px
+            height: 30px                                  

@@ -3,7 +3,7 @@
     var menu = document.querySelector('.main-menu');
     var content = document.querySelector('.page-header__wrapper');
     var name = document.querySelector('.page-header__name');
-    var social = document.querySelector('.page-header__social');
+    var social = document.querySelector('.social');
     var tabs = document.querySelectorAll('.who-i-am__tabs');
     var tabsContainer = document.querySelector('.tabs-container')
     var tabsSections = document.querySelectorAll('.who-i-am__section');
@@ -17,8 +17,8 @@
         name.classList.toggle('page-header__name--right');
         burger.classList.toggle('burger--open');
         menu.classList.toggle('main-menu--open');
-        social.classList.toggle('page-header__social--left');
-        social.classList.toggle('page-header__social--fixed');
+        social.classList.toggle('social--left');
+        social.classList.toggle('social--fixed');
     })
 
     tabsContainer.addEventListener('click', function (evt) {
@@ -55,7 +55,7 @@
 // ПРОКРУТКА СТРАНИЦЫ, НЕ МОЕ
     (function() {
         var linkNav = document.querySelectorAll('[href^="#"]'), //выбираем все ссылки к якорю на странице
-            V = 0.75; // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
+            V = 0.3; // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
         for (var i = 0; i < linkNav.length; i++) {
             linkNav[i].addEventListener('click', function (e) { //по клику на ссылку
                 e.preventDefault(); //отменяем стандартное поведение
@@ -84,14 +84,14 @@
             name.classList.toggle('page-header__name--right');
             burger.classList.toggle('burger--open');
             menu.classList.toggle('main-menu--open');
-            social.classList.toggle('page-header__social--left');
-            social.classList.toggle('page-header__social--fixed');
+            social.classList.toggle('social--left');
+            social.classList.toggle('social--fixed');
         });
     }
     // history.pushState('', document.title, window.location.pathname);
 
     window.onscroll = function () {
-        var placeSourceBottom = place.getBoundingClientRect().top + window.pageYOffset - (skills[0].offsetHeight) - document.querySelector('.skills__header').offsetHeight / 2;
+        var placeSourceBottom = place.getBoundingClientRect().top + window.pageYOffset - (skills[0].offsetHeight) /*- document.querySelector('.skills__header').offsetHeight / 4;*/
         if (window.pageYOffset > placeSourceBottom) {
             for (var i = 0; i < skills.length; i++) {
                 if (window.pageYOffset > placeSourceBottom) {
@@ -107,20 +107,28 @@
     }
     
     var works = document.querySelectorAll('.my-works__work');
+    var slider = document.querySelector('.my-works__slider-container');
     var sliderNext = document.querySelector('.my-works__slider-button--next');
     var sliderPrev = document.querySelector('.my-works__slider-button--prev');
+    var translate = 0;
     // console.log(works, sliderNext, sliderPrev);
 
     sliderNext.addEventListener('click', function(evt) {
         evt.preventDefault();
-        console.log('1');
+        // console.log('1');
         for(var i = 0; i < works.length; i++) {
             if (works[i].classList.contains('my-works__work--active')) {
                 if ([i + 1] < works.length) {
+                    // console.log(translate);
+                    translate -= 100;
+                    slider.style.transform = 'translate(' + translate + 'vw, 0)';
                     works[i].classList.remove('my-works__work--active');
                     works[i + 1].classList.add('my-works__work--active');
+                    // console.log(translate);
                     break;
                 }   else {
+                        translate = 0;
+                        slider.style.transform = 'translate(' + translate + 'vw, 0)';
                         works[i].classList.remove('my-works__work--active');  
                         works[0].classList.add('my-works__work--active'); 
                         break;
@@ -135,10 +143,14 @@
         for(var i = 0; i < works.length; i++) {
             if (works[i].classList.contains('my-works__work--active')) {
                 if ([i - 1] >= 0) {
+                    translate += 100;
+                    slider.style.transform = 'translate(' + translate + 'vw, 0)';
                     works[i].classList.remove('my-works__work--active');
                     works[i - 1].classList.add('my-works__work--active');
                     break;
                 }   else {
+                        translate = -(works.length - 1) * 100;
+                        slider.style.transform = 'translate(' + translate + 'vw, 0)';
                         works[i].classList.remove('my-works__work--active');  
                         works[works.length - 1].classList.add('my-works__work--active'); 
                         break;

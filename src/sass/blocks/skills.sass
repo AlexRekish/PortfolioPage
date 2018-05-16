@@ -4,7 +4,7 @@
     flex-direction: column
     justify-content: center
     padding: 50px
-    padding-bottom: 50vh
+    padding-bottom: 100px
     min-height: 50vh
     position: relative
     overflow: hidden
@@ -13,6 +13,9 @@
     background-position: center bottom
     background-repeat: no-repeat
     background-size: auto 100px
+
+.skills__triangle
+    fill: $viol    
     
 .skills__header
     display: block
@@ -34,8 +37,7 @@
     display: flex
     padding: 50px 0 50px 0
     min-height: 25vh 
-    background-color: $dark
-    position: absolute
+    position: relative
     visibility: hidden
     opacity: 0
     transition: all 0.5s
@@ -111,6 +113,10 @@
         padding: 50px 20px
         padding-bottom: 100px
 
+    .skills__header
+        font-size: 40px
+        line-height: 50px
+
     .skills__my-skill
         flex-direction: column
         width: 100%
@@ -124,10 +130,11 @@
 
     .skills__img-wrapper
         width: 100%
-        padding: 15px
+        padding: 25px
 
     .skills__skill-img       
-        height: 80px
+        height: 100px
 
     .skills__skill-description
         width: 100%      
+        text-align: center
