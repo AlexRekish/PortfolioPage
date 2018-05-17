@@ -20,7 +20,7 @@
     position: absolute
     top: 100px
     right: 100px
-    transform: translate(0,-100%)
+    transform: translate3d(0,-100%, 0)
     // margin-right: 150px
     width: 40%
     align-items: center
@@ -59,7 +59,7 @@
         position: absolute
         top: 50%
         left: 50%
-        transform: translate(-50%, -50%)
+        transform: translate3d(-50%, -50%, 0)
         // background-image: url(../../img/logo/employee.svg)
         background-repeat: no-repeat
         background-size: 25px 25px 
@@ -81,7 +81,7 @@
         color: #fff
         transition: all 0.5s
         opacity: 0
-        transform: translate(-50%, -50%)
+        transform: translate3d(-50%, -50%, 0)
 
     &:hover::after,
     &:focus::after
@@ -130,13 +130,25 @@
     bottom: 150px
     left: 50%
     transition: all 0.5s ease 0.5s
-    transform: translateX(-200%)
+    transform: translate3d(-200%, 0, 0)
     // background-color: $grey
     margin-top: -1px
     z-index: 2
     overflow: hidden
     visibility: hidden
     justify-content: space-between
+    // &::after
+    //     content: ""
+    //     display: block  
+    //     position: absolute
+    //     background-image: url(../../img/border.svg)
+    //     top: 0
+    //     left: 26%
+    //     height: 100%     
+    //     width: 350px
+    //     background-repeat: no-repeat
+    //     background-size: cover
+    //     background-position: 0 0
 
 // .who-i-am__content:nth-child(2)
 //     background-color: $viol
@@ -162,37 +174,44 @@
     // border-radius: 5px
         // filter: grayscale(100%)
 
+.who-i-am__img-border  
+    display: block  
+    position: absolute
+    top: 0
+    left: 25%
+    height: 100%    
+
 .who-i-am__content
     width: 59.5%
     padding: 50px 100px 
     padding-bottom: 10px
     font-size: 20px
     line-height: 30px
-    // background-color: $dark   
+    background-color: $viol
     overflow-y: auto
-    background-image: linear-gradient(to bottom, $viol, transparent)
+    // background-image: linear-gradient(to bottom, $viol, transparent)
     // clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 75% 90%, 75% 100%, 50% 90%, 0 90%);    
     // border-radius: 5px
 
 .who-i-am__section.active
-    transform: translateX(-45%)
+    transform: translate3d(-45%, 0, 0)
     transition: all 0.5s ease 1s  
     visibility: visible
 
 @keyframes tabs
     0%  
         transform-origin: bottom
-        transform: translate(0,-100%) scaleY(1)
+        transform: translate3d(0,-100%, 0) scaleY(1)
 
     20%
-        transform: translate(0,-100%) scaleY(0)
+        transform: translate3d(0,-100%, 0) scaleY(0)
 
     80%
-        transform: translate(0,-100%) scaleY(0)
+        transform: translate3d(0,-100%, 0) scaleY(0)
 
     100%
         transform-origin: bottom
-        transform: translate(0,-100%) scaleY(1)              
+        transform: translate3d(0,-100%, 0) scaleY(1)              
 
 .who-i-am__tabs.active
     background-color: $viol    
@@ -304,7 +323,7 @@
         // margin: 0 10px 0 50px
 
     .who-i-am__section.active
-        transform: translateX(calc(-50% + 30px))
+        transform: translate3d(calc(-50% + 30px), 0, 0)
 
     .who-i-am__image
         display: none
@@ -322,7 +341,7 @@
         flex-direction: column
         width: 40px
         left: 60px
-        transform: translate(-100%, -100%)
+        transform: translate3d(-100%, -100%, 0)
         top: 70%
 
     .who-i-am__tabs
@@ -334,17 +353,17 @@
     @keyframes tabs
         0%  
             transform-origin: right
-            transform: translate(-100%,-100%) scaleX(1)
+            transform: translate3d(-100%,-100%, 0) scaleX(1)
 
         20%
-            transform: translate(0,-100%) scaleX(0)
+            transform: translate3d(0,-100%, 0) scaleX(0)
 
         80%
-            transform: translate(0,-100%) scaleX(0)
+            transform: translate3d(0,-100%, 0) scaleX(0)
 
         100%
             transform-origin: right
-            transform: translate(-100%,-100%) scaleX(1)     
+            transform: translate3d(-100%,-100%, 0) scaleX(1)     
                                
     .who-i-am__title
         padding: 0

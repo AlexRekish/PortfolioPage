@@ -9,17 +9,18 @@
     position: relative
     overflow: hidden
     transition: all 0.5s
-    background-image: url("")
-    background-position: center bottom
+    background-image: url("../../img/skills-vbg.svg"), url("../../img/brain.svg")
+    background-position: 25% 0, 0% 15%
     background-repeat: no-repeat
-    background-size: auto 100px
+    background-size: cover, 50% 
+    font-size: 20px
+    line-height: 30px
 
 .skills__triangle
     fill: $viol    
     
 .skills__header
     display: block
-    background-color: $dark
     width: 100%
     font-weight: 700
     font-size: 60px
@@ -37,13 +38,13 @@
     display: flex
     padding: 50px 0 50px 0
     min-height: 25vh 
-    position: relative
+    // position: relative
     visibility: hidden
-    opacity: 0
+    // opacity: 0
     transition: all 0.5s
 
     &:nth-child(even)
-        transform: translate(-150%, 0)
+        transform: translate3d(-150%, 0,0)
         flex-direction: row-reverse
         // background-image: url("../../img/logo/chatleft.svg")
         // background-repeat: no-repeat
@@ -51,18 +52,18 @@
         // background-position: center
 
     &:nth-child(odd)
-        transform: translate(150%, 0)    
+        transform: translate3d(150%, 0, 0)    
         // background-image: url("../../img/logo/chatright.svg")
         // background-repeat: no-repeat
         // background-size: 100%
         // background-position: center
 
 .skills__my-skill.skills_my-skill--open
-    position: relative
+    // position: relative
     visibility: visible
-    opacity: 1
+    // opacity: 1
     transition: all 0.5s  
-    transform: translate(0, 0)
+    transform: translate3d(0, 0, 0)
 
 .skills__section-header
     width: 20%
@@ -94,6 +95,16 @@
     width: 45%         
     padding: 0 30px    
 
+@media (max-width: 1600px)
+    .skills
+        font-size: 18px
+        line-height: 24px    
+    
+    .skills__header
+        font-size: 50px
+        line-height: 60px
+
+
 @media (max-width: 1360px)
     .skills
         padding: 30px
@@ -108,19 +119,33 @@
     .skills__skill-description
         width: 50%    
 
+@media (max-width: 1200px)
+    .skills
+        font-size: 16px
+        line-height: 20px       
+    
+    .skills__header
+        font-size: 40px
+        line-height: 50px  
+
 @media (max-width: 768px)
     .skills
         padding: 50px 20px
         padding-bottom: 100px
+        font-size: 18px
+        line-height: 24px  
+        background-position: 50% 0, 50% -1%
+        background-size: cover, 75% 
 
     .skills__header
-        font-size: 40px
-        line-height: 50px
+        font-size: 30px
+        line-height: 40px
 
     .skills__my-skill
         flex-direction: column
         width: 100%
         padding: 0
+        background-color: transparent
         
         &:nth-child(even)
             flex-direction: column

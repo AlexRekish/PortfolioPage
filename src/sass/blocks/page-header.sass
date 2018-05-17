@@ -58,7 +58,7 @@
     z-index: 2
     top: 50%
     left: 0
-    transform: translate(-50%, -50%) 
+    transform: translate3d(-50%, -50%, 0) 
     background-color: rgba($viol, 0.2)
     padding: 30px
     transition: 0.5s
@@ -80,12 +80,12 @@
 
 .page-header__wrapper--left
     transition: 0.5s
-    transform: translateX(-320px)
+    transform: translate3d(-320px, 0, 0)
     z-index: 1    
 
 .page-header__name--right
     transition: 0.5s
-    transform: translate(0%, -50%)        
+    transform: translate3d(0%, -50%, 0)        
 
 // MEDIA *********************************************************    
 
@@ -115,7 +115,7 @@
         padding: 30px 70px 25px 70px
 
     .page-header__wrapper--left
-        transform: translateX(-200px)
+        transform: translate3d(-200px, 0, 0)
    
 @media (max-width: 1200px)
     .page-header__main-title
@@ -194,7 +194,7 @@
         padding: 15px   
         width: 100%  
         top: 100%                  
-        transform: translate(0%, -100%)
+        transform: translate3d(0%, -100%, 0)
         background-color: rgba($dark, 0.9)
         
     .page-header__main-title
@@ -207,7 +207,7 @@
 
     .page-header__name--right
         transition: 0.5s
-        transform: translate(0%, -100%)
+        transform: translate3d(0%, -100%, 0)
 
     .page-header__wrapper
         position: relative
@@ -215,7 +215,7 @@
 
     .page-header__wrapper--left
         transition: 0.5s
-        transform: translateX(-100%)
+        transform: translate3d(-100%, 0, 0)
         position: fixed
 
     .page-header__photo
