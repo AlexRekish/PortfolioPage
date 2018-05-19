@@ -19,6 +19,7 @@
     transition: all 0.15s
     opacity: 0
     visibility: hidden
+    overflow: hidden
     
 .main-menu__list
     list-style: none
@@ -106,9 +107,10 @@
         background-size: cover cover
         position: fixed
         top: 0
-        right: 0
+        // right: -10px
         left: 0
-        bottom: 0
+        height: 100%
+        // bottom: -10px
 
     .main-menu__link
         font-size: 30px

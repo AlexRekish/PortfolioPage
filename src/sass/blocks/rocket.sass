@@ -8,10 +8,10 @@
     width: 80px
     height: 80px
     border-radius: 50%
-    z-index: 1000
+    z-index: 700
     bottom: 5%
     right: 5%
-    background-color: rgba($viol, 0.7)
+    background-color: rgba(#fff, 0.7)
     border: 0    
     cursor: pointer
     transition: all 0.3s
@@ -27,12 +27,23 @@
         background-color: $viol 
 
         .rocket__icon
-            transform: rotate(0)        
+            transform: rotate(0)   
+            fill: #fff               
 
 .rocket__icon
     transform: rotate(-45deg)    
     transition: 0.3s       
+    fill: $viol
 
 .rocket--visible
     visibility: visible 
     opacity: 1   
+
+@media (max-width: 768px)
+    .rocket
+        width: 60px
+        height: 60px    
+
+    .rocket__icon
+        width: 40px
+        height: 40px

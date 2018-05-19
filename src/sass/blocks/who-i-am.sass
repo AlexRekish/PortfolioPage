@@ -9,8 +9,7 @@
     background-image: url("../../img/triangles3.svg")
     background-position: 0% 120%
     background-repeat: no-repeat
-    background-size: 100%
-    // margin-top: -1.02px
+    background-size: 100% auto
 
 .who-i-am__triangle
     fill: $dark
@@ -119,7 +118,7 @@
     line-height: 80px  
     white-space: nowrap
     margin: 0
-    padding: 30px 0
+    padding: 30px 0 50px 0
 
 .who-i-am__section
     width: 96%
@@ -137,23 +136,6 @@
     overflow: hidden
     visibility: hidden
     justify-content: space-between
-    // position: relative
-    // &::after
-    //     content: ""
-    //     display: block  
-    //     position: absolute
-    //     background-image: url(../../img/about-triangles.svg)
-    //     top: 50%
-    //     left: 30%
-    //     height: 70%     
-    //     width: 250px
-    //     background-repeat: no-repeat
-    //     background-size: cover
-    //     background-position: 0 0
-    //     transform: translate3d(0, -50%, 0)
-
-// .who-i-am__content:nth-child(2)
-//     background-color: $viol
 
 .who-i-am__image
     width: 45%
@@ -191,22 +173,23 @@
     padding-bottom: 10px
     padding-left: 150px
     font-size: 20px
-    line-height: 30px
+    // line-height: 30px
     background-color: $viol
     overflow-y: auto
-    background-image: url("../../img/about-bg2.svg")
+    background-image: url("../../img/about-bg3.svg")
     background-repeat: no-repeat
     background-position: 50% 20%
     background-size: cover
     position: relative
-    // background-image: linear-gradient(to bottom, $viol, transparent)
-    // clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 75% 90%, 75% 100%, 50% 90%, 0 90%);    
-    // border-radius: 5px
 
 .who-i-am__section.active
     transform: translate3d(-47%, 0, 0)
     transition: all 0.5s ease 1s  
     visibility: visible
+
+.who-i-am__text
+    margin: 0
+    padding: 0    
 
 @keyframes tabs
     0%  
@@ -264,7 +247,7 @@
     .who-i-am__content
         width: 55%
         font-size: 18px
-        line-height: 24px    
+        // line-height: 24px    
         padding: 40px 75px    
         padding-bottom: 10px   
         padding-left: 150px
@@ -304,13 +287,14 @@
         font-size: 40px
         line-height: 50px  
         white-space: pre-wrap
+        padding: 15px 0 35px 0
 
     .who-i-am__image
         width: 45%    
 
     .who-i-am__content    
-        font-size: 16px
-        line-height: 20px       
+        // font-size: 16px
+        // line-height: 20px       
         padding: 25px 50px
         width: 55%
         padding-bottom: 10px
@@ -330,7 +314,17 @@
     .tabs-container
         width: 35%    
 
+    .who-i-am__title
+        padding: 0
+        padding-bottom: 20px
+        font-size: 30px
+        line-height: 40px    
+
 @media (max-width: 800px)
+    .who-i-am
+        background-position: 0% 60%
+        background-repeat: no-repeat
+        background-size: 150%
 
     .who-i-am__section
         width: calc(100% - 60px)
@@ -347,8 +341,8 @@
 
     .who-i-am__content
         width: 100%  
-        font-size: 18px
-        line-height: 24px  
+        // font-size: 18px
+        // line-height: 24px  
         padding: 30px 
         padding-bottom: 10px
         background-color: $viol
@@ -382,9 +376,5 @@
             transform-origin: right
             transform: translate3d(-100%,-100%, 0) scaleX(1)     
                                
-    .who-i-am__title
-        padding: 0
-        padding-bottom: 20px
-        font-size: 30px
-        line-height: 40px
+    
 

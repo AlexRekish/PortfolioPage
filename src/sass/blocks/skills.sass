@@ -14,7 +14,7 @@
     background-repeat: no-repeat
     background-size: cover, 50% 
     font-size: 20px
-    line-height: 30px
+    // line-height: 30px
 
 .skills__triangle
     fill: $viol    
@@ -87,6 +87,7 @@
 .skills__skill-img    
     width: auto
     height: 150px
+    min-height: 150px
     object-fit: contain
     font-family: 'object-fit: contain;'
     padding: 0 30px
@@ -98,7 +99,7 @@
 @media (max-width: 1600px)
     .skills
         font-size: 18px
-        line-height: 24px    
+        // line-height: 24px    
     
     .skills__header
         font-size: 50px
@@ -108,7 +109,6 @@
 @media (max-width: 1360px)
     .skills
         padding: 30px
-        padding-bottom: 200px
 
     .skills__section-header
         width: 10%
@@ -120,26 +120,28 @@
         width: 50%    
 
 @media (max-width: 1200px)
-    .skills
-        font-size: 16px
-        line-height: 20px       
+    // .skills
+    //     font-size: 16px
+    //     line-height: 20px       
     
     .skills__header
         font-size: 40px
         line-height: 50px  
+        padding: 15px 0 35px 0
+
+@media (max-width: 992px)
+    .skills__header
+        font-size: 30px
+        line-height: 40px
 
 @media (max-width: 768px)
     .skills
         padding: 50px 20px
-        padding-bottom: 100px
-        font-size: 18px
-        line-height: 24px  
+        padding-bottom: 50px
+        // font-size: 18px
+        // line-height: 24px  
         background-position: 50% 0, 50% -1%
         background-size: cover, 75% 
-
-    .skills__header
-        font-size: 30px
-        line-height: 40px
 
     .skills__my-skill
         flex-direction: column

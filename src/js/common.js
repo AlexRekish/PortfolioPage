@@ -1,3 +1,4 @@
+"use strict"
 ;(function(){
     var burger = document.querySelector('.burger');
     var menu = document.querySelector('.main-menu');
@@ -12,6 +13,7 @@
     var skills = document.querySelectorAll('.skills__my-skill');
     var rocket = document.querySelector('.rocket');
 
+    //Бургер меню************************************************************************
     burger.addEventListener('click', function(evt) {
         evt.preventDefault();
         content.classList.toggle('page-header__wrapper--left');
@@ -20,8 +22,8 @@
         menu.classList.toggle('main-menu--open');
         social.classList.toggle('social--left');
         social.classList.toggle('social--fixed');
-    })
-
+    });
+    //Табы*********************************************************************************
     tabsContainer.addEventListener('click', function (evt) {
         evt.preventDefault();
         var targetTab = evt.target;
@@ -53,25 +55,23 @@
         tabsSections[index].classList.add('active');
     });
 //************************************************************************************* */
-// ПРОКРУТКА СТРАНИЦЫ, НЕ МОЕ
+// ПРОКРУТКА СТРАНИЦЫ, НЕ МОЕ. Разобрался
     (function() {
         var linkNav = document.querySelectorAll('[href^="#"]');
         var V = 0.3;
         //выбираем все ссылки к якорю на странице
              // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
         for (var i = 0; i < linkNav.length; i++) {
-            linkNav[i].addEventListener('click', function (e) { //по клику на ссылку
-                e.preventDefault(); //отменяем стандартное поведение
-                console.log(e.currentTarget);
-                console.log(document.querySelector('[href="#home"]'));
-                if (e.currentTarget.href == document.querySelector('[href="#home"]').href) {
+            linkNav[i].addEventListener('click', function (evt) { 
+                evt.preventDefault(); 
+                if (evt.currentTarget.href == document.querySelector('[href="#home"]').href) {
                     V = 0.15;
                 } 
-                var w = window.pageYOffset, // производим прокрутка прокрутка
-                    hash = this.href.replace(/[^#]*(.*)/, '$1'); // к id элемента, к которому нужно перейти
-                t = document.querySelector(hash).getBoundingClientRect().top, // отступ от окна браузера до id
+                var w = window.pageYOffset,
+                    hash = this.href.replace(/[^#]*(.*)/, '$1'),
+                    t = document.querySelector(hash).getBoundingClientRect().top, 
                     start = null;
-                requestAnimationFrame(step); // подробнее про функцию анимации [developer.mozilla.org]
+                requestAnimationFrame(step); 
                 function step(time) {
                     if (start === null) start = time;
                     var progress = time - start,
@@ -85,6 +85,7 @@
         }
     })();
 /****************************************************************************************** */
+    //Закрываем меню при клике по ссылке
     for (var link = 0; link < menuLinks.length; link++) {
         menuLinks[link].addEventListener('click', function (evt) {
             evt.preventDefault();
@@ -96,8 +97,8 @@
             social.classList.toggle('social--fixed');
         });
     }
-    // history.pushState('', document.title, window.location.pathname);
 
+//Появление навыков и ракеты при прокрутке до секции****************************************
     window.onscroll = function () {
         var section2 = document.querySelector('.who-i-am')
         var section2Top = section2.getBoundingClientRect().top + section2.offsetHeight;
@@ -118,8 +119,8 @@
         if (window.pageYOffset > section2Top) {
             rocket.classList.add('rocket--visible');
         } else rocket.classList.remove('rocket--visible');
-    }
-    
+    };
+//Слайдер**********************************************************************
     var works = document.querySelectorAll('.my-works__work');
     var slider = document.querySelector('.my-works__slider-container');
     var sliderNext = document.querySelector('.my-works__slider-button--next');
@@ -174,8 +175,9 @@
         }
     });
 
+/*Параллакс*********************************************************************************** */
     var parallaxContainer = document.querySelector('.parallax-wrapper');
-    var worksSection = document.querySelector('.my-works')
+    var worksSection = document.querySelector('.my-works');
 
     function moveTriangles(evt) {    
         var parallaxLayers = parallaxContainer.children;
@@ -187,12 +189,10 @@
             var divider = (i + 1) / 100;
             var translateX = initialX * divider;
             var translateY = initialY * divider;
-            var transform = 'translate3d(' + translateX + 'px ,' + translateY + 'px , 0';
+            var transform = 'translate3d(' + translateX + 'px ,' + translateY + 'px, 0)';
             parallaxLayers[i].style.transform = transform;
         }
-        
-
-    }
+    };
     
     worksSection.addEventListener('mousemove', moveTriangles);
 
