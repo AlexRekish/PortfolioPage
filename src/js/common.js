@@ -193,8 +193,10 @@
             parallaxLayers[i].style.transform = transform;
         }
     };
+    if (window.innerWidth > 768) {
+        worksSection.addEventListener('mousemove', moveTriangles);
+    }
     
-    worksSection.addEventListener('mousemove', moveTriangles);
 
 
 })();

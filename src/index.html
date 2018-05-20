@@ -52,10 +52,11 @@
 					<b class="page-header__subtitle subtitle">Front-end developer</b>
 				</div>
 				<picture>
-					<source srcset="img/photo2@2x.webp 2x" type="image/webp" data-object-fit="cover">
-					<source srcset="img/photo2@1x.webp" type="image/webp" data-object-fit="cover">
-					<source srcset="img/photo2@2x.jpg 2x" type="image/jpeg" data-object-fit="cover">
-					<img src="img/photo2@1x.jpg" class="page-header__photo" alt="Черно-белое фото с изображением Алексея Рекиша" data-object-fit="cover">		
+					<source media="(max-width: 1360px)" srcset="img/photo2@0.5x.webp 1x, img/photo2@1x.webp 2x" type="image/webp" data-object-fit="cover">
+					<source srcset="img/photo2@1x.webp 1x, img/photo2@2x.webp 2x" type="image/webp" data-object-fit="cover">
+					
+					<source media="(max-width: 1360px)" srcset="img/photo2@0,5x.jpg 1x, img/photo2@1x.jpg 2x" type="image/jpeg" data-object-fit="cover">
+					<img src="img/photo2@1x.jpg" srcset="img/photo2@2x.jpg 2x" class="page-header__photo" alt="Черно-белое фото с изображением Алексея Рекиша" data-object-fit="cover">		
 				</picture>
 				<a href="#who-i-am" class="btn page-header__start">Познакомимся поближе?</a>
 			</div>
@@ -94,7 +95,7 @@
 						</a>
 					</li>
 					<li class="social-item">
-						<a href="https://t.me/PikaPikaBitch" class="social-link" target="_blank">
+						<a href="https://t.me/AliakseiR" class="social-link" target="_blank">
 							<span class="visually-hidden">Telegram</span>
 							<svg class="social-icon" width="25" height="25" aria-label="Иконка Telegram">
 								<use xlink:href="img/sprite.svg#icon-telegram"></use>
@@ -133,10 +134,10 @@
 					<a href="#skills" class="main-menu__link">Мои навыки</a>
 				</li>
 				<li class="main-menu__list-item">
-					<a href="#page-footer" class="main-menu__link">Резюме</a>
+					<a href="#my-works" class="main-menu__link">Мои работы</a>
 				</li>
 				<li class="main-menu__list-item">
-					<a href="#my-works" class="main-menu__link">Мои работы</a>
+					<a href="#page-footer" class="main-menu__link">Резюме</a>
 				</li>
 				<!-- <li class="main-menu__list-item">
 					<a href="#" class="main-menu__link">Обратная связь</a>
@@ -166,52 +167,69 @@
 		<section class="who-i-am__section who-i-am__section--about-me active">
 			<div class="who-i-am__image">
 				<picture>
-					<source media="(max-width: 1360px)" srcset="img/welcome_1360@2x.webp 2x" type="image/webp" data-object-fit="cover">
-					<source media="(max-width: 1360px)" srcset="img/welcome_1360@1x.webp" type="image/webp" data-object-fit="cover">
-					<source media="(max-width: 1600px)" srcset="img/welcome@0,5x.webp" type="image/webp" data-object-fit="cover">
-					<source media="(max-width: 1600px)" srcset="img/welcome@1x.webp 2x" type="image/webp" data-object-fit="cover">
-					<source srcset="img/welcome@1x.webp" type="image/webp" data-object-fit="cover">
+					<source media="(max-width: 1360px)" srcset="img/welcome_1360@1x.webp 1x, img/welcome_1360@2x.webp 2x" type="image/webp" data-object-fit="cover">
+					<source media="(max-width: 1600px)" srcset="img/welcome@0,5x.webp 1x, img/welcome@1x.webp 2x" type="image/webp" data-object-fit="cover">
+					<source srcset="img/welcome@1x.webp 1x" type="image/webp" data-object-fit="cover">
 					
-					<source media="(max-width: 1360px)" srcset="img/welcome_1360@2x.jpg 2x" type="image/jpeg" data-object-fit="cover">
-					<source media="(max-width: 1360px)" srcset="img/welcome_1360@1x.jpg" type="image/jpeg" data-object-fit="cover">
-					<source media="(max-width: 1600px)" srcset="img/welcome@0,5x.jpg" type="image/jpeg" data-object-fit="cover">
-					<source media="(max-width: 1600px)" srcset="img/welcome@1x.jpg 2x" type="image/jpeg" data-object-fit="cover">
+					<source media="(max-width: 1360px)" srcset="img/welcome_1360@1x.jpg 1x, img/welcome_1360@2x.jpg 2x" type="image/jpeg" data-object-fit="cover">
+					<source media="(max-width: 1600px)" srcset="img/welcome@0,5x.jpg 1x, img/welcome@1x.jpg 2x" type="image/jpeg" data-object-fit="cover">
 					<img src="img/welcome@1x.jpg" alt="На изображении надпись 'Welcome' " class="who-i-am__image-img" data-object-fit="cover">
 				</picture>
 			</div>
 			<div class="who-i-am__content">
 				<h2 class="who-i-am__title">Добро пожаловать</h2>
-				<p class="who-i-am__text">Добро пожаловать на мой сайт. Меня зовут Алексей Рекиш. Я начинающий front-end разработчик, JavaScript энтузиаст и любитель котиков. Здесь вы можете найти немного информации обо мне, просмотреть мои работы и резюме или написать мне письмо. Приятного просмотра!</p>
+				<p class="who-i-am__text">Меня зовут Алексей Рекиш. Мне 25 лет. Я начинающий front-end разработчик. Искренне влюблен в веб-программирование и стремлюсь развиться в настоящего профессионала в данной области. <br>Здесь Вы можете найти более подробную информацию обо мне, просмотреть мои работы и скачать резюме. Также со мной всегда можно связаться по указанным здесь контактным данным.<br> Приятного просмотра!</p>
 			</div>
 		</section>
 		<section class="who-i-am__section who-i-am__section--education">
 			<div class="who-i-am__image">
-				<picture>
-					<!-- <source media="(max-width: 1360px)" srcset="img/photo2@1x.jpg"> -->
+				<!-- <picture>
 					<img src="img/photo2@1x.jpg" alt="Фото Алексея Рекиша" class="who-i-am__image-img" data-object-fit="cover">
+				</picture>	 -->
+				<picture>
+					<source media="(max-width: 1360px)" srcset="img/education_1360@0,5x.webp 1x, img/education_1360@1x.webp 2x" type="image/webp" data-object-fit="cover">
+					<source media="(max-width: 1600px)" srcset="img/education@0,5x.webp 1x, img/education@1x.webp 2x" type="image/webp" data-object-fit="cover">
+					<source srcset="img/education@1x.webp 1x, img/education@2x.webp 2x" type="image/webp" data-object-fit="cover">
+				
+					<source media="(max-width: 1360px)" srcset="img/education_1360@0,5x.jpg 1x, img/education_1360@1x.jpg 2x" type="image/jpeg"	data-object-fit="cover">
+					<source media="(max-width: 1600px)" srcset="img/education@0,5x.jpg 1x, img/education@1x.jpg 2x" type="image/jpeg" data-object-fit="cover">
+					<img src="img/education@1x.jpg" srcset="img/education@2x.jpg 2x" alt="На изображении человек c книгой за ноутбуком" class="who-i-am__image-img"
+					 data-object-fit="cover">
+				</picture>
+			</div>
+			<div class="who-i-am__content">
+				<h2 class="who-i-am__title">Образование</h2>
+				<p class="who-i-am__text">В 2015 году закончил Гомельский государственный университет им. Ф. Скорины по специальности "Программное обеспечение информационных технологий". На данный момент активно занимаюсь самообразованием. Прошел интерактивные курсы по верстке и JavaScript на HTML Academy и Webreference. Просмотрел программы интенсивов и онлайн-курсов HTML Academy, LoftSchool, Webformyself и на основе полученных знаний сделал несколько проектов. Продолжаю постоянно углублять и расширять свои знания. Сейчас основной упор делаю на JavaScript. В ближайших планах знакомство с Vue.js. В перспективе планирую вырасти в полноценного full-stack специалиста.</p>
+			</div>
+		</section>
+		<section class="who-i-am__section who-i-am__section--hobbies">
+			<div class="who-i-am__image">
+				<picture>
+					<source media="(max-width: 1360px)" srcset="img/hobby_1360@1x.webp 1x, img/hobby_1360@2x.webp 2x" type="image/webp" data-object-fit="cover">
+					<source media="(max-width: 1600px)" srcset="img/hobby_1360@1,5x.webp 1x, img/hobby_1360@2x.webp 2x" type="image/webp" data-object-fit="cover">
+					<source srcset="img/hobby@1,5x.webp 1x, img/hobby@2x.webp 2x" type="image/webp" data-object-fit="cover">
+					
+					<source media="(max-width: 1360px)" srcset="img/hobby_1360@1x.jpg 1x, img/hobby_1360@2x.jpg 2x" type="image/jpeg" data-object-fit="cover">
+					<source media="(max-width: 1600px)" srcset="img/hobby_1360@1,5x.jpg 1x, img/hobby_1360@2x.jpg 2x" type="image/jpeg" data-object-fit="cover">
+					<img src="img/hobby@1x.jpg" srcset="img/hobby@2x.jpg 2x" alt="На изображении человек за ноутбуком" class="who-i-am__image-img" data-object-fit="cover">
 				</picture>	
 			</div>
 			<div class="who-i-am__content">
-				<h2 class="who-i-am__title">Обо мне</h2>
-				<p class="who-i-am__text">Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Инициал, рукопись грустный себя знаках, пояс образ даже вдали решила последний, предупредила буквоград заглавных парадигматическая большого курсивных коварных пустился сих. Ipsum там, мир которой коварных языком от всех ее, эта, обеспечивает путь родного жизни не журчит она? Мир рукопись возвращайся однажды его заголовок гор заманивший, сих раз злых над. Раз обеспечивает агентство маленький то, единственное взобравшись. Маленькая своих толку лучше! Запятой предупредила пунктуация большой великий дорогу если все взгляд! Текстов всемогущая свое грустный своих, снова повстречался рукописи переписали текст предложения пояс послушавшись своего возвращайся парадигматическая всеми, если, языком дороге. Пунктуация, снова. Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Она своих, там имеет коварных имени буквоград вопроса большого живет однажды но грамматики ему?</p>
+				<h2 class="who-i-am__title">Мои увлечения</h2>
+				<p class="who-i-am__text">Основным моим увлечением является веб-разработка. Сейчас я активно изучаю материалы (книги, статьи, вебинары, записи конференций и т.д.) на эту тему, благо современный интернет даёт огромные возможности для изучения чего угодно. В целом я трачу на самообразование и саморазвитие большую часть своего времени и могу сказать, что умею и люблю изучать что-то новое. Также интересуюсь технологическими и программными новшествами.<br> Помимо профессиональных интересов люблю почитать художественную литературу, сходить в кино или послушать музыку. Особняком выделю любовь к семье и котикам :)</p>
 			</div>
 		</section>
 		<section class="who-i-am__section who-i-am__section--contacts">
 			<div class="who-i-am__image">
 				<picture>
-					<source media="(max-width: 1360px)" srcset="img/contacts_1360@1x.webp" type="image/webp" data-object-fit="cover">
-					<source media="(max-width: 1360px)" srcset="img/contacts_1360@2x.webp 2x" type="image/webp" data-object-fit="cover">
-					<source media="(max-width: 1600px)" srcset="img/contacts_1360@1,5x.webp" type="image/webp" data-object-fit="cover">
-					<source media="(max-width: 1600px)" srcset="img/contacts_1360@2x.webp 2x" type="image/webp" data-object-fit="cover">
-					<source srcset="img/contacts@2x.webp 2x" type="image/webp" data-object-fit="cover">
-					<source srcset="img/contacts@1,5x.webp" type="image/webp" data-object-fit="cover">
-					
-					<source media="(max-width: 1360px)" srcset="img/contacts_1360@1x.jpg" type="image/jpeg" data-object-fit="cover">
-					<source media="(max-width: 1360px)" srcset="img/contacts_1360@2x.jpg 2x" type="image/jpeg" data-object-fit="cover">
-					<source media="(max-width: 1600px)" srcset="img/contacts_1360@1,5x.jpg" type="image/jpeg" data-object-fit="cover">
-					<source media="(max-width: 1600px)" srcset="img/contacts_1360@2x.jpg 2x" type="image/jpeg" data-object-fit="cover">
-					<source srcset="img/contacts@2x.jpg 2x" type="image/jpeg" data-object-fit="cover">
-					<img src="img/contacts@1,5x.jpg" alt="На изображении конверт электронной почты" class="who-i-am__image-img" data-object-fit="cover">
+					<source media="(max-width: 1360px)" srcset="img/contacts_1360@1x.webp 1x, img/contacts_1360@2x.webp 2x" type="image/webp" data-object-fit="cover">
+					<source media="(max-width: 1600px)" srcset="img/contacts_1360@1,5x.webp 1x, img/contacts_1360@2x.webp 2x" type="image/webp" data-object-fit="cover">
+					<source srcset="img/contacts@1,5x.webp 1x, img/contacts@2x.webp 2x" type="image/webp" data-object-fit="cover">
+		
+					<source media="(max-width: 1360px)" srcset="img/contacts_1360@1x.jpg 1x, img/contacts_1360@2x.jpg 2x" type="image/jpeg" data-object-fit="cover">
+					<source media="(max-width: 1600px)" srcset="img/contacts_1360@1,5x.jpg 1x, img/contacts_1360@2x.jpg 2x" type="image/jpeg" data-object-fit="cover">
+					<img src="img/contacts@1,5x.jpg" srcset="img/contacts@2x.jpg 2x" alt="На изображении конверт электронной почты" class="who-i-am__image-img"
+					 data-object-fit="cover">
 				</picture>
 			</div>
 			<div class="who-i-am__content">
@@ -225,7 +243,8 @@
 						Электронная почта:
 						<a href="mailto:alexeyrekish@gmail.com" class="contacts-list__link">
 							alexeyrekish@gmail.com
-						</a></li>
+						</a>
+					</li>
 					<li class="contacts-list__item">
 						Skype:
 						<a href="skype:mysterious295" class="contacts-list__link" target="_blank">
@@ -234,8 +253,8 @@
 					</li>
 					<li class="contacts-list__item">
 						Telegram:
-						<a href="https://t.me/PikaPikaBitch" class="contacts-list__link" target="_blank">
-							@PikaPikaBitch
+						<a href="https://t.me/AliakseiR" class="contacts-list__link" target="_blank">
+							@AliakseiR
 						</a>
 					</li>
 					<li class="contacts-list__item">
@@ -244,30 +263,7 @@
 							Алексей Рекиш
 						</a>
 					</li>
-				</ul>	
-			</div>
-		</section>
-		<section class="who-i-am__section who-i-am__section--hobbies">
-			<div class="who-i-am__image">
-				<picture>
-					<source media="(max-width: 1360px)" srcset="img/hobby_1360@1x.webp" type="image/webp" data-object-fit="cover">
-					<source media="(max-width: 1360px)" srcset="img/hobby_1360@2x.webp 2x" type="image/webp" data-object-fit="cover">
-					<source media="(max-width: 1600px)" srcset="img/hobby_1360@1,5x.webp" type="image/webp" data-object-fit="cover">
-					<source media="(max-width: 1600px)" srcset="img/hobby_1360@2x.webp 2x" type="image/webp" data-object-fit="cover">
-					<source srcset="img/hobby@2x.webp 2x" type="image/webp" data-object-fit="cover">
-					<source srcset="img/hobby@1,5x.webp" type="image/webp" data-object-fit="cover">
-					
-					<source media="(max-width: 1360px)" srcset="img/hobby_1360@1x.jpg" type="image/jpeg" data-object-fit="cover">
-					<source media="(max-width: 1360px)" srcset="img/hobby_1360@2x.jpg 2x" type="image/jpeg" data-object-fit="cover">
-					<source media="(max-width: 1600px)" srcset="img/hobby_1360@1,5x.jpg" type="image/jpeg" data-object-fit="cover">
-					<source media="(max-width: 1600px)" srcset="img/hobby_1360@2x.jpg 2x" type="image/jpeg" data-object-fit="cover">
-					<source srcset="img/hobby@2x.jpg 2x" type="image/jpeg" data-object-fit="cover">
-					<img src="img/hobby@1x.jpg" alt="На изображении человек за ноутбуком" class="who-i-am__image-img" data-object-fit="cover">
-				</picture>	
-			</div>
-			<div class="who-i-am__content">
-				<h2 class="who-i-am__title">Мои увлечения</h2>
-				<p class="who-i-am__text">Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Инициал, рукопись грустный себя знаках, пояс образ даже вдали решила последний, предупредила буквоград заглавных парадигматическая большого курсивных коварных пустился сих. Ipsum там, мир которой коварных языком от всех ее, эта, обеспечивает путь родного жизни не журчит она? Мир рукопись возвращайся однажды его заголовок гор заманивший, сих раз злых над. Раз обеспечивает агентство маленький то, единственное взобравшись. Маленькая своих толку лучше! Запятой предупредила пунктуация большой великий дорогу если все взгляд! Текстов всемогущая свое грустный своих, снова повстречался рукописи переписали текст предложения пояс послушавшись своего возвращайся парадигматическая всеми, если, языком дороге. Пунктуация, снова. Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Она своих, там имеет коварных имени буквоград вопроса большого живет однажды но грамматики ему?</p>
+				</ul>
 			</div>
 		</section>
 		<svg class="who-i-am__triangle triangle">
@@ -281,56 +277,53 @@
 			<div class="skills__img-wrapper">
 				<img src="img/logo/HTML5.svg" alt="Логотип HTML5" class="skills__skill-img">
 			</div>
-			<p class="skills__skill-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur culpa distinctio nesciunt perspiciatis eum harum totam nihil. Error ullam vero, laudantium ex distinctio illum qui quo nemo facere porro in, totam quasi fugiat necessitatibus fuga ipsum perspiciatis. Doloremque, incidunt beatae dolore accusantium architecto repellat cumque id doloribus ex ipsa at.</p>
+			<p class="skills__skill-description">
+				Хорошие знания HTML5. Навыки семантически правильной и валидной (W3C validator) верстки, опыт кроссбраузерной (IE11, MS Edge, gecko, webkit, blink) и адаптивной (responsive) верстки.
+			</p>
 		</section>
 		<section class="skills__my-skill skills__my-skill--css">
 			<h3 class="skills__section-header">CSS3</h3>
 			<div class="skills__img-wrapper">
 				<img src="img/logo/CSS3.svg" alt="Логотип CSS3" class="skills__skill-img">
 			</div>
-			<p class="skills__skill-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur culpa distinctio nesciunt perspiciatis eum harum totam nihil. Error ullam vero, laudantium ex distinctio illum qui quo nemo facere porro in, totam quasi fugiat necessitatibus fuga ipsum perspiciatis. Doloremque, incidunt beatae dolore accusantium architecto repellat cumque id doloribus ex ipsa at.</p>
+			<p class="skills__skill-description">Хорошие знания CCS3. С закрытыми глазами верстаю на flexbox, уверенно применяю трансформации, базово владею анимациями, знаком с CSS Grid.</p>
 		</section>
 		<section class="skills__my-skill skills__my-skill--sass">
 			<h3 class="skills__section-header">Sass</h3>
 			<div class="skills__img-wrapper">
 				<img src="img/logo/Sass.svg" alt="Логотип Sass" class="skills__skill-img">
 			</div>
-			<p class="skills__skill-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur culpa distinctio nesciunt perspiciatis eum harum totam nihil. Error ullam vero, laudantium ex distinctio illum qui quo nemo facere porro in, totam quasi fugiat necessitatibus fuga ipsum perspiciatis. Doloremque, incidunt beatae dolore accusantium architecto repellat cumque id doloribus ex ipsa at.</p>
+			<p class="skills__skill-description">Уверенное владение и применение Sass. Пользуюсь упрощенным синтаксисом, но также имею опыт работы и с SCSS. Из препроцессоров CSS также знаком с less, но предпочтение отдаю именно Sass.</p>
 		</section>
 		<section class="skills__my-skill skills__my-skill--js">
 			<h3 class="skills__section-header">JavaScript</h3>
 			<div class="skills__img-wrapper">
 				<img src="img/logo/JS.svg" alt="Логотип JavaScript" class="skills__skill-img">
 			</div>
-			<p class="skills__skill-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur culpa distinctio nesciunt perspiciatis eum harum totam nihil. Error ullam vero, laudantium ex distinctio illum qui quo nemo facere porro in, totam quasi fugiat necessitatibus fuga ipsum perspiciatis. Doloremque, incidunt beatae dolore accusantium architecto repellat cumque id doloribus ex ipsa at.</p>
-		</section>
-		<section class="skills__my-skill skills__my-skill--dom">
-			<h3 class="skills__section-header">Document Object Model</h3>
-			<div class="skills__img-wrapper">
-				<img src="img/logo/DOM.svg" alt="Логотип Document Object Model" class="skills__skill-img">
-			</div>
-			<p class="skills__skill-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur culpa distinctio nesciunt perspiciatis eum harum totam nihil. Error ullam vero, laudantium ex distinctio illum qui quo nemo facere porro in, totam quasi fugiat necessitatibus fuga ipsum perspiciatis. Doloremque, incidunt beatae dolore accusantium architecto repellat cumque id doloribus ex ipsa at.</p>
+			<p class="skills__skill-description">Базовые знания JavaScript. На данный момент активно углубляюсь именно в этом направлении. Прохожу интерактивные курсы, смотрю вебинары, читаю книги и статьи по JS. На практике пишу велосипеды и стараюсь разбираться как те или иные вещи работают. Реализацию части полученных знаний можно увидеть на этом сайте.</p>
 		</section>
 		<section class="skills__my-skill skills__my-skill--gulp">
 			<h3 class="skills__section-header">Gulp</h3>
 			<div class="skills__img-wrapper">
 				<img src="img/logo/gulp.svg" alt="Логотип Gulp" class="skills__skill-img">
 			</div>
-			<p class="skills__skill-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur culpa distinctio nesciunt perspiciatis eum harum totam nihil. Error ullam vero, laudantium ex distinctio illum qui quo nemo facere porro in, totam quasi fugiat necessitatibus fuga ipsum perspiciatis. Doloremque, incidunt beatae dolore accusantium architecto repellat cumque id doloribus ex ipsa at.</p>
+			<p class="skills__skill-description">
+				Имею опыт работы с Gulp.js. С помощью Gulp поднимаю локальный сервер, разделяю директории для разработки и готового результата, оптимизирую изображения, создаю SVG спрайты, компилирую sass в css, минифицирую и конкатенирую js файлы и в целом сильно упрощаю себе жизнь :)
+			</p>
 		</section>
 		<section class="skills__my-skill skills__my-skill--git">
 			<h3 class="skills__section-header">Git</h3>
 			<div class="skills__img-wrapper">
 				<img src="img/logo/Git.svg" alt="Логотип Git" class="skills__skill-img">
 			</div>
-			<p class="skills__skill-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur culpa distinctio nesciunt perspiciatis eum harum totam nihil. Error ullam vero, laudantium ex distinctio illum qui quo nemo facere porro in, totam quasi fugiat necessitatibus fuga ipsum perspiciatis. Doloremque, incidunt beatae dolore accusantium architecto repellat cumque id doloribus ex ipsa at.</p>
+			<p class="skills__skill-description">Имею базовые навыки работы с Git. Понимаю принципы и общую схему работы данной системы контроля версий.</p>
 		</section>
 		<section class="skills__my-skill skills__my-skill--ps">
 			<h3 class="skills__section-header">Adobe Photoshop</h3>
 			<div class="skills__img-wrapper">
 				<img src="img/logo/Photoshop.svg" alt="Логотип Adobe Photoshop" class="skills__skill-img">
 			</div>
-			<p class="skills__skill-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur culpa distinctio nesciunt perspiciatis eum harum totam nihil. Error ullam vero, laudantium ex distinctio illum qui quo nemo facere porro in, totam quasi fugiat necessitatibus fuga ipsum perspiciatis. Doloremque, incidunt beatae dolore accusantium architecto repellat cumque id doloribus ex ipsa at.</p>
+			<p class="skills__skill-description">Владею Adobe Photoshop на уровне работы с PSD макетами. Также иcпользую данную программу в процессе подготовки изображений для адаптивных сайтов. Для работы с SVG использую Adobe Illustrator.</p>
 		</section>
 	</section>
 	<section class="my-works" id="my-works">
@@ -339,37 +332,31 @@
 			<div class="my-works__work my-works__work--active">
 				<div class="my-works__img-wrapper">
 					<picture>
-						<source media="(max-width: 768px)" srcset="img/sedona@0,25x.webp" type="image/webp">
-						<source media="(max-width: 768px)" srcset="img/sedona@0,5x.webp 2x" type="image/webp">
-						<source media="(max-width: 1600px)" srcset="img/sedona@0,5x.webp" type="image/webp">
-						<source media="(max-width: 1600px)" srcset="img/sedona@1x.webp 2x" type="image/webp">
-						<source srcset="img/sedona@2x.webp 2x" type="image/webp">
-						<source srcset="img/sedona@1x.webp" type="image/webp">
-						
-						<source media="(max-width: 768px)" srcset="img/sedona@0,25x.png" type="image/png">
-						<source media="(max-width: 768px)" srcset="img/sedona@0,5x.png 2x" type="image/png">
-						<source media="(max-width: 1600px)" srcset="img/sedona@0,5x.png" type="image/png">
-						<source media="(max-width: 1600px)" srcset="img/sedona@1x.png 2x" type="image/png">
-						<source srcset="img/sedona@2x.png 2x" type="image/png">
-						<img src="img/sedona@1x.png" alt="" class="my-works__work-img">
+						<source media="(max-width: 768px)" srcset="img/sedona@0,25x.webp 1x, img/sedona@0,5x.webp 2x" type="image/webp">
+						<source media="(max-width: 1600px)" srcset="img/sedona@0,5x.webp 1x, img/sedona@1x.webp 2x" type="image/webp">
+						<source srcset="img/sedona@1x.webp 1x, img/sedona@2x.webp 2x" type="image/webp">
+			
+						<source media="(max-width: 768px)" srcset="img/sedona@0,25x.png 1x, img/sedona@0,5x.png 2x" type="image/png">
+						<source media="(max-width: 1600px)" srcset="img/sedona@0,5x.png 1x, img/sedona@1x.png 2x" type="image/png">
+						<img src="img/sedona@1x.png" srcset="img/sedona@2x.png 2x" alt="" class="my-works__work-img">
 					</picture>
 				</div>
 				<div class="my-works__work-content">
-					<h3 class="my-works__work-title">Sedona</h3>
-					<p class="my-works__work-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id esse dolores repudiandae eum, eius aspernatur tempore. Atque illo eveniet quas, aut nihil eligendi, quis architecto suscipit, saepe dignissimos nulla delectus accusantium a in culpa molestias! Est eveniet totam aliquam ullam aperiam aspernatur mollitia eius dicta illo quibusdam? Explicabo, a corrupti.</p>
+					<h3 class="my-works__work-title">Мой личный сайт-портфолио</h3>
+					<p class="my-works__work-description">Разработка дизайна и реализация собственного проекта сайта-портфолио. <br>Реализованы: полная отзывчивость сайта, ретинизация, кроссбраузерность (IE11, MS Edge, Gecko, Webkit и Blink), доступность, слайдер, табы, параллакс, плавный переход по якорям. В разработке использовались БЭМ методология и принцип "Desktop First".</p>
 					<div class="my-works__links-wrapper">
-						<a href="https://alexrekish.github.io/Sedona/" class="my-works__work-link" target="_blank">
+						<a class="my-works__work-link" target="_blank">
 							<svg class="my-works__link-icons" width="30" height="30" aria-label="Стрелочка вперед">
 								<use xlink:href="img/sprite.svg#icon-tap"></use>
 							</svg>
-							Посмотреть работу
+							Вы уже здесь :)
 						</a>
-						<a href="https://github.com/AlexRekish/Sedona" class="my-works__work-link" target="_blank">
+						<a href="https://github.com/AlexRekish/PortfolioPage" class="my-works__work-link" target="_blank">
 							<svg class="my-works__link-icons my-works__link-icons--github" width="30" height="30"
 							 aria-label="Стрелочка вперед">
 								<use xlink:href="img/sprite.svg#icon-github"></use>
 							</svg>
-							Репозиторий проекта на GitHub
+							Репозиторий проекта
 						</a>
 					</div>
 				</div>
@@ -377,28 +364,18 @@
 			<div class="my-works__work">
 				<div class="my-works__img-wrapper">
 					<picture>
-						<source media="(max-width: 768px)" srcset="img/sedona@0,25x.webp" type="image/webp">
-						<source media="(max-width: 768px)" srcset="img/sedona@0,5x.webp 2x" type="image/webp">
-						<source media="(max-width: 1600px)" srcset="img/sedona@0,5x.webp" type="image/webp">
-						<source media="(max-width: 1600px)" srcset="img/sedona@1x.webp 2x" type="image/webp">
-						<source srcset="img/sedona@2x.webp 2x" type="image/webp">
-						<source srcset="img/sedona@1x.webp" type="image/webp">
-			
-						<source media="(max-width: 768px)" srcset="img/sedona@0,25x.png" type="image/png">
-						<source media="(max-width: 768px)" srcset="img/sedona@0,5x.png 2x" type="image/png">
-						<source media="(max-width: 1600px)" srcset="img/sedona@0,5x.png" type="image/png">
-						<source media="(max-width: 1600px)" srcset="img/sedona@1x.png 2x" type="image/png">
-						<source srcset="img/sedona@2x.png 2x" type="image/png">
-						<img src="img/sedona@1x.png" alt="" class="my-works__work-img">
+						<source media="(max-width: 768px)" srcset="img/sedona@0,25x.webp 1x, img/sedona@0,5x.webp 2x" type="image/webp">
+						<source media="(max-width: 1600px)" srcset="img/sedona@0,5x.webp 1x, img/sedona@1x.webp 2x" type="image/webp">
+						<source srcset="img/sedona@1x.webp 1x, img/sedona@2x.webp 2x" type="image/webp">
+						
+						<source media="(max-width: 768px)" srcset="img/sedona@0,25x.png 1x, img/sedona@0,5x.png 2x" type="image/png">
+						<source media="(max-width: 1600px)" srcset="img/sedona@0,5x.png 1x, img/sedona@1x.png 2x" type="image/png">
+						<img src="img/sedona@1x.png" srcset="img/sedona@2x.png 2x" alt="" class="my-works__work-img">
 					</picture>
 				</div>
 				<div class="my-works__work-content">
-					<h3 class="my-works__work-title">Sedona 2</h3>
-					<p class="my-works__work-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id esse dolores repudiandae
-						eum, eius aspernatur tempore. Atque illo eveniet quas, aut nihil eligendi, quis
-						architecto suscipit, saepe dignissimos nulla delectus accusantium a in culpa molestias!
-						Est eveniet totam aliquam ullam aperiam aspernatur mollitia eius dicta illo quibusdam?
-						Explicabo, a corrupti.</p>
+					<h3 class="my-works__work-title">Sedona</h3>
+					<p class="my-works__work-description">Реализация учебного проекта интенсива "HTML и CSS, Уровень 2" HTML Academy. Верстка сайта туристической компании. <br>Реализованы: адаптивность, ретинизация, кроссбраузерность (Chrome, Firefox, Opera, Safari, Edge и IE11), доступность. В разработке использована БЭМ методология. Вёрстка производилась по принципу "Mobile First".</p>
 					<div class="my-works__links-wrapper">
 						<a href="https://alexrekish.github.io/Sedona/" class="my-works__work-link" target="_blank">
 							<svg class="my-works__link-icons" width="30" height="30" aria-label="Стрелочка вперед">
@@ -411,12 +388,12 @@
 							 aria-label="Стрелочка вперед">
 								<use xlink:href="img/sprite.svg#icon-github"></use>
 							</svg>
-							Репозиторий проекта на GitHub
+							Репозиторий проекта
 						</a>
 					</div>
 				</div>
 			</div>
-			<div class="my-works__work">
+			<!-- <div class="my-works__work">
 				<div class="my-works__img-wrapper">
 					<picture>
 						<source media="(max-width: 768px)" srcset="img/sedona@0,25x.webp" type="image/webp">
@@ -457,7 +434,7 @@
 						</a>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>	
 		<button type="button" class="my-works__slider-button my-works__slider-button--next">
 			<span class="visually-hidden">Следующая работа</span>
