@@ -1,3 +1,4 @@
+
 //SVG POLYFILL******************************************************
 (function () {
     if ("undefined" !== typeof window && window.addEventListener) {
@@ -111,104 +112,6 @@
         "complete" !== document.readyState ? window.addEventListener("load", p, !1) : p()
     }
 })();
-
-//OBJ-FIT polyfill**************************************************
-
-// this.fitie = function (node) {
-//     // restrict to valid object-fit value
-//     var objectFit = node.currentStyle ? node.currentStyle['object-fit'] : null;
-
-//     if (!objectFit || !/^(contain|cover|fill)$/.test(objectFit)) return;
-
-//     // prepare container styles
-//     var outerWidth = node.clientWidth;
-//     var outerHeight = node.clientHeight;
-//     var outerRatio = outerWidth / outerHeight;
-
-//     var name = node.nodeName.toLowerCase();
-
-//     var setCSS = node.runtimeStyle;
-//     var getCSS = node.currentStyle;
-
-//     var addEventListener = node.addEventListener || node.attachEvent;
-//     var removeEventListener = node.removeEventListener || node.detachEvent;
-//     var on = node.addEventListener ? '' : 'on';
-//     var img = name === 'img';
-//     var type = img ? 'load' : 'loadedmetadata';
-
-//     addEventListener.call(node, on + type, onload);
-
-//     if (node.complete) onload();
-
-//     function onload() {
-//         removeEventListener.call(node, on + type, onload);
-
-//         // prepare container styles
-//         var imgCSS = {
-//             boxSizing: 'content-box',
-//             display: 'inline-block',
-//             overflow: 'hidden'
-//         };
-
-//         'backgroundColor backgroundImage borderColor borderStyle borderWidth bottom fontSize lineHeight height left opacity margin position right top visibility width'.replace(/\w+/g, function (key) {
-//             imgCSS[key] = getCSS[key];
-//         });
-
-//         // prepare image styles
-//         setCSS.border = setCSS.margin = setCSS.padding = 0;
-//         setCSS.display = 'block';
-//         setCSS.height = setCSS.width = 'auto';
-//         setCSS.opacity = 1;
-
-//         var innerWidth = node.videoWidth || node.width;
-//         var innerHeight = node.videoHeight || node.height;
-//         var innerRatio = innerWidth / innerHeight;
-
-//         // style container
-//         var imgx = document.createElement('object-fit');
-
-//         imgx.appendChild(node.parentNode.replaceChild(imgx, node));
-
-//         for (var key in imgCSS) imgx.runtimeStyle[key] = imgCSS[key];
-
-//         // style image
-//         var newSize;
-
-//         if (objectFit === 'fill') {
-//             if (img) {
-//                 setCSS.width = outerWidth;
-//                 setCSS.height = outerHeight;
-//             } else {
-//                 setCSS['-ms-transform-origin'] = '0% 0%';
-//                 setCSS['-ms-transform'] = 'scale(' + outerWidth / innerWidth + ',' + outerHeight / innerHeight + ')';
-//             }
-//         } else if (innerRatio < outerRatio ? objectFit === 'contain' : objectFit === 'cover') {
-//             newSize = outerHeight * innerRatio;
-
-//             setCSS.width = Math.round(newSize) + 'px';
-//             setCSS.height = outerHeight + 'px';
-//             setCSS.marginLeft = Math.round((outerWidth - newSize) / 2) + 'px';
-//         } else {
-//             newSize = outerWidth / innerRatio;
-
-//             setCSS.width = outerWidth + 'px';
-//             setCSS.height = Math.round(newSize) + 'px';
-//             setCSS.marginTop = Math.round((outerHeight - newSize) / 2) + 'px';
-//         }
-//     }
-// };
-// this.fitie.init = function () {
-//     if (document.body) {
-//         var all = document.querySelectorAll('img,video');
-//         var index = -1;
-
-//         while (all[++index]) fitie(all[index]);
-//     } else {
-//         setTimeout(fitie.init);
-//     }
-// };
-
-// if (/MSIE|Trident/.test(navigator.userAgent)) this.fitie.init();
 
 //OBJ-FIT Edge polyfill***********************************************
 /*! npm.im/object-fit-images 3.2.3 */
@@ -332,83 +235,10 @@ var objectFitImages = function () {
 }();
 
 objectFitImages();
-// OBJ POLY
-// ! function () {
-//     "use strict";
-//     if ("undefined" != typeof window) {
-//         var t = window.navigator.userAgent.match(/Edge\/(\d{2})\./),
-//             e = !!t && parseInt(t[1], 10) >= 16;
-//         if ("objectFit" in document.documentElement.style != !1 && !e) return void(window.objectFitPolyfill = function () {
-//             return !1
-//         });
-//         var i = function (t) {
-//                 var e = window.getComputedStyle(t, null),
-//                     i = e.getPropertyValue("position"),
-//                     n = e.getPropertyValue("overflow"),
-//                     o = e.getPropertyValue("display");
-//                 i && "static" !== i || (t.style.position = "relative"), "hidden" !== n && (t.style.overflow = "hidden"), o && "inline" !== o || (t.style.display = "block"), 0 === t.clientHeight && (t.style.height = "100%"), -1 === t.className.indexOf("object-fit-polyfill") && (t.className = t.className + " object-fit-polyfill")
-//             },
-//             n = function (t) {
-//                 var e = window.getComputedStyle(t, null),
-//                     i = {
-//                         "max-width": "none",
-//                         "max-height": "none",
-//                         "min-width": "0px",
-//                         "min-height": "0px",
-//                         top: "auto",
-//                         right: "auto",
-//                         bottom: "auto",
-//                         left: "auto",
-//                         "margin-top": "0px",
-//                         "margin-right": "0px",
-//                         "margin-bottom": "0px",
-//                         "margin-left": "0px"
-//                     };
-//                 for (var n in i) {
-//                     e.getPropertyValue(n) !== i[n] && (t.style[n] = i[n])
-//                 }
-//             },
-//             o = function (t, e, i) {
-//                 var n, o, l, a, d;
-//                 if (i = i.split(" "), i.length < 2 && (i[1] = i[0]), "x" === t) n = i[0], o = i[1], l = "left", a = "right", d = e.clientWidth;
-//                 else {
-//                     if ("y" !== t) return;
-//                     n = i[1], o = i[0], l = "top", a = "bottom", d = e.clientHeight
-//                 }
-//                 return n === l || o === l ? void(e.style[l] = "0") : n === a || o === a ? void(e.style[a] = "0") : "center" === n || "50%" === n ? (e.style[l] = "50%", void(e.style["margin-" + l] = d / -2 + "px")) : n.indexOf("%") >= 0 ? (n = parseInt(n), void(n < 50 ? (e.style[l] = n + "%", e.style["margin-" + l] = d * (n / -100) + "px") : (n = 100 - n, e.style[a] = n + "%", e.style["margin-" + a] = d * (n / -100) + "px"))) : void(e.style[l] = n)
-//             },
-//             l = function (t) {
-//                 var e = t.dataset ? t.dataset.objectFit : t.getAttribute("data-object-fit"),
-//                     l = t.dataset ? t.dataset.objectPosition : t.getAttribute("data-object-position");
-//                 e = e || "cover", l = l || "50% 50%";
-//                 var a = t.parentNode;
-//                 i(a), n(t), t.style.position = "absolute", t.style.height = "100%", t.style.width = "auto", "scale-down" === e && (t.style.height = "auto", t.clientWidth < a.clientWidth && t.clientHeight < a.clientHeight ? (o("x", t, l), o("y", t, l)) : (e = "contain", t.style.height = "100%")), "none" === e ? (t.style.width = "auto", t.style.height = "auto", o("x", t, l), o("y", t, l)) : "cover" === e && t.clientWidth > a.clientWidth || "contain" === e && t.clientWidth < a.clientWidth ? (t.style.top = "0", t.style.marginTop = "0", o("x", t, l)) : "scale-down" !== e && (t.style.width = "100%", t.style.height = "auto", t.style.left = "0", t.style.marginLeft = "0", o("y", t, l))
-//             },
-//             a = function (t) {
-//                 if (void 0 === t) t = document.querySelectorAll("[data-object-fit]");
-//                 else if (t && t.nodeName) t = [t];
-//                 else {
-//                     if ("object" != typeof t || !t.length || !t[0].nodeName) return !1;
-//                     t = t
-//                 }
-//                 for (var i = 0; i < t.length; i++)
-//                     if (t[i].nodeName) {
-//                         var n = t[i].nodeName.toLowerCase();
-//                         "img" !== n || e ? "video" === n && (t[i].readyState > 0 ? l(t[i]) : t[i].addEventListener("loadedmetadata", function () {
-//                             l(this)
-//                         })) : t[i].complete ? l(t[i]) : t[i].addEventListener("load", function () {
-//                             l(this)
-//                         })
-//                     }
-//                 return !0
-//             };
-//         document.addEventListener("DOMContentLoaded", function () {
-//             a()
-//         }), window.addEventListener("resize", function () {
-//             a()
-//         }), window.objectFitPolyfill = a
-//     }
-// }();
 
-//
 !function(t,e){"use strict";"function"==typeof define&&define.amd?define(["exports"],e):e("object"==typeof exports?exports:t)}(this,function(t){"use strict";function e(){return"clip-path-"+Math.random().toString(36).substring(7)}function i(t,i){i=i.replace(/px|%|em/g,"");var n=t.getAttribute("data-clip-path-id");if(n)document.querySelector("#"+n+" > polygon").setAttribute("points",i);else{var r=e(),o=document.createElementNS("http://www.w3.org/2000/svg","svg");o.setAttribute("width","0"),o.setAttribute("height","0"),o.setAttributeNS("http://www.w3.org/2000/xmlns/","xmlns:xlink","http://www.w3.org/1999/xlink");var a=document.createElementNS("http://www.w3.org/2000/svg","clipPath");a.setAttribute("id",r);var p=document.createElementNS("http://www.w3.org/2000/svg","polygon");p.setAttribute("points",i),a.appendChild(p),o.appendChild(a),document.body.appendChild(o),t.setAttribute("data-clip-path-id",r),setTimeout(function(){t.style.clipPath="url(#"+r+")"},0)}}function n(t,e,n){n=void 0!==n?n:o,void 0!==t.style.webkitClipPath?t.style.webkitClipPath="polygon("+e+")":n?t.style.clipPath="polygon("+e+")":i(t,e)}function r(t,e,i){if(!t)return console.error("Missing selector"),!1;var r=document.querySelectorAll(t||"");Array.prototype.forEach.call(r,function(t){var r=t.getAttribute("data-clip")||e;r?n(t,r,i):console.error("Missing clip-path parameters. Please check ClipPath() arguments or data-clip attribute.",t)})}var o=function(){var t=document.createElement("div");return t.style.clipPath="polygon(0 0, 0 0, 0 0, 0 0)","polygon(0 0, 0 0, 0 0, 0 0)"===t.style.clipPath}();r.applyClipPath=n,"undefined"!=typeof jQuery&&function(t,e){t.fn.ClipPath=function(i){return i===Object(i)&&i.path&&(i=i.path),this.each(function(){e.applyClipPath(this,t(this).attr("data-clip")||i)})}}(jQuery,r),t.ClipPath=r});
+
+/*! picturefill - v3.0.2 - 2016-02-12
+ * https://scottjehl.github.io/picturefill/
+ * Copyright (c) 2016 https://github.com/scottjehl/picturefill/blob/master/Authors.txt; Licensed MIT
+ */

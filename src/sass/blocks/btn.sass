@@ -4,17 +4,18 @@
     display: block
     text-decoration: none
     color: #fff
-    padding: 30px 130px 25px 130px
+    padding: 30px 130px
     line-height: 16px
     text-align: center
     vertical-align: middle
     font-family: $header
     font-weight: 700
-    background-color: $viol
+    background-color: rgba($viol, 0.9)
     text-transform: uppercase
-    border-bottom: 5px solid rgba($dark, 0.4)
     border-radius: 5px
     transition: all 0.3s
+    position: relative
+    z-index: 100
 
     &:hover,
     &:focus
@@ -23,13 +24,13 @@
 
 @media (max-width: 1360px)       
     .btn           
-        padding: 30px 70px 25px 70px
+        padding: 30px 70px 
 
 @media (max-width: 1200px)
     .btn           
-        padding: 25px 50px 20px 50px    
+        padding: 25px 50px
 
 @media (max-width: 992px) 
     .btn     
-        padding: 20px 40px 15px 40px 
+        padding: 20px 40px
             

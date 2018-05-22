@@ -179,7 +179,8 @@
     var parallaxContainer = document.querySelector('.parallax-wrapper');
     var worksSection = document.querySelector('.my-works');
 
-    function moveTriangles(evt) {    
+    function moveTriangles(evt) {  
+        evt.preventDefault();  
         var parallaxLayers = parallaxContainer.children;
         var pageX = evt.pageX;
         var pageY = evt.pageY;
@@ -189,7 +190,7 @@
             var divider = (i + 1) / 100;
             var translateX = initialX * divider;
             var translateY = initialY * divider;
-            var transform = 'translate3d(' + translateX + 'px ,' + translateY + 'px, 0)';
+            var transform = 'translate3d(' + translateX + 'px,' + translateY + 'px, 0)';
             parallaxLayers[i].style.transform = transform;
         }
     };
