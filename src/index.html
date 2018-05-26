@@ -6,12 +6,16 @@
 	<title>Алексей Рекиш | Веб-разработчик</title>
 	<meta name="author" content="Алексей Рекиш">
 	<meta name="description" content="Алексей Рекиш - Front-end developer">
-	<meta name="keywords" content="Алексей Рекиш, web-developer, веб-разработчик, Front-end developer, личная страница, портфолио">
+	<meta name="keywords" content="Алексей Рекиш, web-developer, веб-разработка, Front-end developer, личная страница, сайт-портфолио">
+	<meta name="copyright" content="Права принадлежат Алексею Рекишу">
+	<meta name="yandex-verification" content="ee6bbc1522f66cbc"/>
+	<meta name="google-site-verification" content="iB2b0MX-n8xjkN6_cbssV_7YiTmxjF47TiI7Z7FKktM" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="all">
 	
 	<!-- Template Basic Images Start -->
-	<meta property="og:image" content="">
+	<meta property="og:image" content="img/photo2@1x.jpg">
 	<link rel="icon" href="img/favicon/favicon.ico">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-chrome-192x192.png">
@@ -33,12 +37,42 @@
 	<link rel="preload" href="js/scripts.min.js" as="script" >
 	<link rel="preload" href="fonts/roboto-condensed.woff2" as="font">
 	<!-- Preloads End -->
-
+        
 	<link rel="stylesheet" href="css/main.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" async></script>
 	
 </head>
 <body class="isHome">
+
+    <!-- Yandex.Metrika counter -->
+    <script>
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter48992501 = new Ya.Metrika({
+                        id:48992501,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true
+                    });
+                } catch(e) { }
+            });
+    
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+    
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/48992501" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+        
 	<header class="page-header" id="home">
 		<div class="page-header__wrapper">
 			<div class="page-header__content">
@@ -106,14 +140,14 @@
 							</svg>
 						</a>
 					</li>
-					<li class="social-item">
+					<!-- <li class="social-item">
 						<a href="#" class="social-link" target="_blank">
 							<span class="visually-hidden">LinkedIn</span>
 							<svg class="social-icon" width="25" height="25" aria-label="Иконка LinkedIn">
 								<use xlink:href="img/sprite.svg#icon-linkedin"></use>
 							</svg>
 						</a>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 		</div>
@@ -264,7 +298,7 @@
 				<img src="img/logo/HTML5.svg" alt="Логотип HTML5" class="skills__skill-img">
 			</div>
 			<p class="skills__skill-description">
-				Хорошие знания HTML5. Навыки семантически правильной и валидной (W3C validator) верстки, опыт кроссбраузерной (IE11, MS Edge, gecko, webkit, blink) и адаптивной (responsive) верстки, ретинизация. Также стараюсь верстать доступно.
+				Уверенное применение HTML5. Навыки семантически правильной и валидной (W3C validator) верстки, опыт кроссбраузерной (IE11, MS Edge, gecko, webkit, blink) и адаптивной (responsive) верстки, ретинизация. Также стараюсь верстать доступно.
 			</p>
 		</section>
 		<section class="skills__my-skill skills__my-skill--css">
@@ -272,14 +306,14 @@
 			<div class="skills__img-wrapper">
 				<img src="img/logo/CSS3.svg" alt="Логотип CSS3" class="skills__skill-img">
 			</div>
-			<p class="skills__skill-description">Хорошие знания CCS3. Верстаю на flexbox, уверенно применяю трансформации, базово владею анимациями, знаком с CSS Grid.</p>
+			<p class="skills__skill-description">Уверенное применение CCS3. Верстка на flexbox, использование трансформаций, базовое владение анимациями. Также знаком с CSS Grid.</p>
 		</section>
 		<section class="skills__my-skill skills__my-skill--sass">
 			<h3 class="skills__section-header">Sass</h3>
 			<div class="skills__img-wrapper">
 				<img src="img/logo/Sass.svg" alt="Логотип Sass" class="skills__skill-img">
 			</div>
-			<p class="skills__skill-description">Уверенное владение и применение Sass. Пользуюсь упрощенным синтаксисом, но также знаком с SCSS. Из препроцессоров CSS также пробовал работать с less, но предпочтение отдал именно Sass.</p>
+			<p class="skills__skill-description">Уверенное владение и применение Sass. Пользуюсь упрощенным синтаксисом, но также знаком с SCSS. Из препроцессоров CSS пробовал работать и с less, но предпочтение отдал именно Sass.</p>
 		</section>
 		<section class="skills__my-skill skills__my-skill--js">
 			<h3 class="skills__section-header">JavaScript</h3>
@@ -294,7 +328,7 @@
 				<img src="img/logo/gulp.svg" alt="Логотип Gulp" class="skills__skill-img">
 			</div>
 			<p class="skills__skill-description">
-				Имею опыт работы с Gulp.js. С помощью Gulp поднимаю локальный сервер, разделяю директории для разработки и готового результата, оптимизирую изображения, создаю SVG спрайты, компилирую sass в css, минифицирую и конкатенирую js файлы и в целом сильно упрощаю себе жизнь :)
+				Опыт работы с Gulp.js. С помощью Gulp поднимаю локальный сервер, разделяю директории для разработки и готового результата, оптимизирую изображения, создаю SVG спрайты, компилирую sass в css, минифицирую и конкатенирую js файлы и в целом сильно упрощаю себе жизнь :)
 			</p>
 		</section>
 		<section class="skills__my-skill skills__my-skill--git">
@@ -302,14 +336,14 @@
 			<div class="skills__img-wrapper">
 				<img src="img/logo/Git.svg" alt="Логотип Git" class="skills__skill-img">
 			</div>
-			<p class="skills__skill-description">Имею базовые навыки работы с Git. Понимаю принципы и общую схему работы данной системы контроля версий.</p>
+			<p class="skills__skill-description">Базовые навыки работы с Git. Понимаю принципы и общую схему работы данной системы контроля версий.</p>
 		</section>
 		<section class="skills__my-skill skills__my-skill--ps">
 			<h3 class="skills__section-header">Adobe Photoshop</h3>
 			<div class="skills__img-wrapper">
 				<img src="img/logo/Photoshop.svg" alt="Логотип Adobe Photoshop" class="skills__skill-img">
 			</div>
-			<p class="skills__skill-description">Владею Adobe Photoshop на уровне работы с PSD макетами. Также иcпользую данную программу в процессе подготовки изображений для адаптивных сайтов. Для работы с SVG использую Adobe Illustrator.</p>
+			<p class="skills__skill-description">Владение Adobe Photoshop на уровне работы с PSD макетами. Также иcпользую данную программу в процессе подготовки изображений для адаптивных сайтов. Для работы с SVG использую Adobe Illustrator.</p>
 		</section>
 		<svg class="skills__triangle--back triangle--back" aria-label="Декоративный треугольник">
 			<use xlink:href="img/triangles-back.svg#triangle-back"></use>
@@ -327,12 +361,12 @@
 			
 						<source media="(max-width: 768px)" srcset="img/portfolio@0,25x.png 1x, img/portfolio@0,5x.png 2x" type="image/png">
 						<source media="(max-width: 1600px)" srcset="img/portfolio@0,5x.png 1x, img/portfolio@1x.png 2x" type="image/png">
-						<img src="img/portfolio@1x.png" srcset="img/portfolio@2x.png 2x" alt="" class="my-works__work-img">
+						<img src="img/portfolio@1x.png" srcset="img/portfolio@2x.png 2x" alt="Фото отображения сайта-портфолио на компьютере, планшете и телефоне" class="my-works__work-img">
 					</picture>
 				</div>
 				<div class="my-works__work-content">
 					<h3 class="my-works__work-title">Мой сайт-портфолио</h3>
-					<p class="my-works__work-description">Разработка дизайна и реализация собственного проекта сайта-портфолио. <br>Реализованы: полная отзывчивость сайта, ретинизация, кроссбраузерность (IE11, MS Edge, Gecko, Webkit и Blink), доступность. В разработке использовались БЭМ методология и принцип "Desktop First".</p>
+					<p class="my-works__work-description">Разработка дизайна и реализация собственного проекта сайта-портфолио. <br>Реализованы: полная отзывчивость сайта, ретинизация, кроссбраузерность (IE11, MS Edge, Gecko, Webkit и Blink), доступность, оптимизация скорости загрузки сайта. В разработке использовались БЭМ методология и принцип "Desktop First".</p>
 					<div class="my-works__links-wrapper">
 						<a class="my-works__work-link" target="_blank">
 							<svg class="my-works__link-icons" width="30" height="30" aria-label="Стрелочка вперед">
@@ -359,12 +393,12 @@
 						
 						<source media="(max-width: 768px)" srcset="img/sedona@0,25x.png 1x, img/sedona@0,5x.png 2x" type="image/png">
 						<source media="(max-width: 1600px)" srcset="img/sedona@0,5x.png 1x, img/sedona@1x.png 2x" type="image/png">
-						<img src="img/sedona@1x.png" srcset="img/sedona@2x.png 2x" alt="" class="my-works__work-img">
+						<img src="img/sedona@1x.png" srcset="img/sedona@2x.png 2x" alt="Фото отображения сайта Sedona на компьютере, планшете и телефоне" class="my-works__work-img">
 					</picture>
 				</div>
 				<div class="my-works__work-content">
 					<h3 class="my-works__work-title">Sedona</h3>
-					<p class="my-works__work-description">Реализация учебного проекта интенсива "HTML и CSS, Уровень 2" HTML Academy. Верстка сайта туристической компании. <br>Реализованы: адаптивность, ретинизация, кроссбраузерность (Chrome, Firefox, Opera, Safari, Edge и IE11), доступность. В разработке использована БЭМ методология. Вёрстка производилась по принципу "Mobile First".</p>
+					<p class="my-works__work-description">Реализация учебного проекта интенсива "HTML и CSS, Уровень 2" HTML Academy. Верстка сайта туристической компании. <br>Реализованы: адаптивность, ретинизация, кроссбраузерность (Chrome, Firefox, Opera, Safari, Edge и IE11), доступность,  оптимизация скорости загрузки сайта. В разработке использована БЭМ методология. Вёрстка производилась по принципу "Mobile First".</p>
 					<div class="my-works__links-wrapper">
 						<a href="https://alexrekish.github.io/Sedona/" class="my-works__work-link" target="_blank">
 							<svg class="my-works__link-icons" width="30" height="30" aria-label="Стрелочка вперед">
@@ -416,7 +450,7 @@
 				<h2 class="page-footer__title main-title">Алексей Рекиш</h2>
 				<b class="page-footer__subtitle subtitle">Front-end developer</b>
 			</div>
-			<a class="btn page-footer__resume-link">Скачать резюме</a>
+			<a href="https://drive.google.com/file/d/1wrAEu_v9Y2LCsR9iVE08hqRD0id-H2yA/view?usp=drivesdk" class="btn page-footer__resume-link" target="_blank">Скачать резюме</a>
 		</div>
 		<div class="page-footer__bottom-wrapper">
 			<p class="page-footer__copyrights">
@@ -450,7 +484,7 @@
 						</a>
 					</li>
 					<li class="social-item">
-						<a href="https://t.me/PikaPikaBitch" class="social-link" target="_blank">
+						<a href="https://t.me/AliakseiR" class="social-link" target="_blank">
 							<span class="visually-hidden">Telegram</span>
 							<svg class="social-icon" width="25" height="25" aria-label="Иконка Telegram">
 								<use xlink:href="img/sprite.svg#icon-telegram"></use>
@@ -465,14 +499,14 @@
 							</svg>
 						</a>
 					</li>
-					<li class="social-item">
+					<!-- <li class="social-item">
 						<a href="#" class="social-link" target="_blank">
 							<span class="visually-hidden">LinkedIn</span>
 							<svg class="social-icon" width="25" height="25" aria-label="Иконка LinkedIn">
 								<use xlink:href="img/sprite.svg#icon-linkedin"></use>
 							</svg>
 						</a>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 		</div>
