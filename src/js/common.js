@@ -181,7 +181,7 @@
 
     function moveTriangles(evt) {  
         evt.preventDefault();  
-        var parallaxLayers = parallaxContainer.children;
+        var parallaxLayers = parallaxContainer.querySelectorAll('.parallax__triangles img');
         var pageX = evt.pageX;
         var pageY = evt.pageY;
         var initialX = window.innerWidth / 2 - pageX;
