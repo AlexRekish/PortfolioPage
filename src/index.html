@@ -320,7 +320,7 @@
 			<div class="skills__img-wrapper">
 				<img src="img/logo/JS.svg" alt="Логотип JavaScript" class="skills__skill-img">
 			</div>
-			<p class="skills__skill-description">Базовые знания JavaScript. На данный момент активно углубляюсь именно в этом направлении. Прохожу интерактивные курсы, смотрю вебинары, читаю книги и статьи по JS. На практике пишу велосипеды и стараюсь разбираться как те или иные вещи работают. Реализацию части полученных знаний можно увидеть на этом сайте.</p>
+			<p class="skills__skill-description">Средние знания JavaScript. На данный момент активно углубляюсь именно в это направление, в частности в ES6. Делаю учебные проекты, смотрю вебинары, читаю книги и статьи по JS. На практике пишу велосипеды и стараюсь разбираться как те или иные вещи работают. Реализацию части полученных знаний можно увидеть на этом сайте.</p>
 		</section>
 		<section class="skills__my-skill skills__my-skill--gulp">
 			<h3 class="skills__section-header">Gulp</h3>
@@ -352,7 +352,42 @@
 	<section class="my-works" id="my-works">
 		<h2 class="my-works__title"> Мои работы</h2>
 		<div class="my-works__slider-container">
-			<div class="my-works__work my-works__work--active">
+			<section class="my-works__work my-works__work--active">
+				<div class="my-works__img-wrapper">
+					<picture>
+						<source media="(max-width: 768px)" srcset="img/keks@0,5x.webp 1x, img/keks@1x.webp 2x"
+						 type="image/webp">
+						<source srcset="img/keks@1x.webp 1x, img/keks@2x.webp 2x" type="image/webp">
+			
+						<source media="(max-width: 768px)" srcset="img/keks@0,5x.png 1x, img/keks@1x.png 2x"
+						 type="image/png">
+						<img src="img/keks@1x.png" srcset="img/keks@2x.png 2x" alt="Фото отображения сайта 'Кекстаграм' на компьютере"
+						 class="my-works__work-img">
+					</picture>
+				</div>
+				<div class="my-works__work-content">
+					<h3 class="my-works__work-title">Кекстаграм</h3>
+					<p class="my-works__work-description">Реализация учебного проекта интенсива "JavaScript, Уровень 1" HTML Academy. <br>Разработка JavaScript-части сервиса для обмена фотографиями.
+						<br>Реализованы: Получение изображений с сервера и отправка изображений на сервер посредством Ajax запросов. Отрисовка полученных изображений на странице с помощью шаблонов. Просмотр увеличенных изображений с возможностью листания мышью/клавиатурой. Предпросмотр загружаемого изображения с возможностью наложения фильтров и изменения масштаба. Слайдер для контроля уровня фильтров. Валидация формы согласно ТЗ. Сортировка полученных с сервера изображений согласно выбранного фильтра. </p>
+					<div class="my-works__links-wrapper">
+						<a href="https://alexrekish.github.io/Keksogram/" class="my-works__work-link" target="_blank">
+							<svg class="my-works__link-icons" width="30" height="30" aria-label="Стрелочка вперед">
+								<use xlink:href="img/sprite.svg#icon-tap"></use>
+							</svg>
+							Посмотреть работу
+						</a>
+						<a href="https://github.com/AlexRekish/Keksogram" class="my-works__work-link"
+						 target="_blank">
+							<svg class="my-works__link-icons my-works__link-icons--github" width="30" height="30"
+							 aria-label="Стрелочка вперед">
+								<use xlink:href="img/sprite.svg#icon-github"></use>
+							</svg>
+							Репозиторий проекта
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="my-works__work">
 				<div class="my-works__img-wrapper">
 					<picture>
 						<source media="(max-width: 768px)" srcset="img/portfolio@0,25x.webp 1x, img/portfolio@0,5x.webp 2x" type="image/webp">
@@ -383,8 +418,8 @@
 						</a>
 					</div>
 				</div>
-			</div>
-			<div class="my-works__work">
+			</section>
+			<section class="my-works__work">
 				<div class="my-works__img-wrapper">
 					<picture>
 						<source media="(max-width: 768px)" srcset="img/sedona@0,25x.webp 1x, img/sedona@0,5x.webp 2x" type="image/webp">
@@ -398,7 +433,7 @@
 				</div>
 				<div class="my-works__work-content">
 					<h3 class="my-works__work-title">Sedona</h3>
-					<p class="my-works__work-description">Реализация учебного проекта интенсива "HTML и CSS, Уровень 2" HTML Academy. Верстка сайта туристической компании. <br>Реализованы: адаптивность, ретинизация, кроссбраузерность (Chrome, Firefox, Opera, Safari, Edge и IE11), доступность,  оптимизация скорости загрузки сайта. В разработке использована БЭМ методология. Вёрстка производилась по принципу "Mobile First".</p>
+					<p class="my-works__work-description">Реализация учебного проекта интенсива "HTML и CSS, Уровень 2" HTML Academy. <br>Верстка сайта туристической компании. <br>Реализованы: адаптивность, ретинизация, кроссбраузерность (Chrome, Firefox, Opera, Safari, Edge и IE11), доступность,  оптимизация скорости загрузки сайта. В разработке использована БЭМ методология. Вёрстка производилась по принципу "Mobile First".</p>
 					<div class="my-works__links-wrapper">
 						<a href="https://alexrekish.github.io/Sedona/" class="my-works__work-link" target="_blank">
 							<svg class="my-works__link-icons" width="30" height="30" aria-label="Стрелочка вперед">
@@ -415,7 +450,7 @@
 						</a>
 					</div>
 				</div>
-			</div>
+			</section>
 		</div>	
 		<button type="button" class="my-works__slider-button my-works__slider-button--next">
 			<span class="visually-hidden">Следующая работа</span>
