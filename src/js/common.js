@@ -34,8 +34,6 @@
             }
         }
 
-        var section = tabsSections[index];
-
         if (!evt.target.classList.contains('active')) {
             tabsContainer.classList.add('active');
             setTimeout(function () {
@@ -198,6 +196,4 @@
         worksSection.addEventListener('mousemove', moveTriangles);
     }
     
-
-
 })();
